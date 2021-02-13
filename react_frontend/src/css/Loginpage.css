@@ -51,6 +51,11 @@
   font-size: 17px;
 }
 
+.button-class:hover {
+  background-color: rgb(138, 141, 138);
+  cursor: pointer;
+}
+
 .text-vertical-center {
   position: relative;
   top: calc(50% - 16px);
