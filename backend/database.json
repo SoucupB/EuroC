@@ -1,0 +1,1760 @@
+{
+  "user": [
+    {
+      "id": 0,
+      "nume": "Georgina",
+      "prenume": "Muresan",
+      "parola": "tarc12345",
+      "CNP": "8120221448537",
+      "adresa": "Alba lulia",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "4GY4Z6Z",
+      "user_type": "normal",
+      "telefon": "0756575352",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 1,
+      "nume": "Georgina",
+      "prenume": "Muresan",
+      "parola": "tarc12345",
+      "CNP": "8120221117628",
+      "adresa": "Alba lulia",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "7MV61SI",
+      "user_type": "support",
+      "telefon": "0756575352",
+      "email": "sabrin@gmail.com"
+    },
+    {
+      "id": 2,
+      "nume": "Ionel",
+      "prenume": "Pop",
+      "parola": "admin12345",
+      "CNP": "5210202015210",
+      "adresa": "Alunului",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "TXCUUI4",
+      "user_type": "support",
+      "telefon": "0756422243",
+      "email": "andree@gmail.com"
+    },
+    {
+      "id": 3,
+      "nume": "Ana",
+      "prenume": "Roman",
+      "parola": "catamaru",
+      "CNP": "7120225446313",
+      "adresa": "Albiei",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "3Z639C5",
+      "user_type": "support",
+      "telefon": "0753175352",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 4,
+      "nume": "Ionel",
+      "prenume": "Pop",
+      "parola": "abcd54321",
+      "CNP": "7120225067311",
+      "adresa": "Alesd",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "G4TJZXL",
+      "user_type": "admin",
+      "telefon": "0756575352",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 5,
+      "nume": "Georgina",
+      "prenume": "Ghiolban",
+      "parola": "catamaru",
+      "CNP": "7120225446313",
+      "adresa": "Albiei",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "66IVALC",
+      "user_type": "normal",
+      "telefon": "0756422243",
+      "email": "mihael@gmail.com"
+    },
+    {
+      "id": 6,
+      "nume": "Ana",
+      "prenume": "Muresan",
+      "parola": "admin12345",
+      "CNP": "7120225067311",
+      "adresa": "Albiei",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "X44XNIH",
+      "user_type": "normal",
+      "telefon": "0756575352",
+      "email": "sabrin@gmail.com"
+    },
+    {
+      "id": 7,
+      "nume": "Georgina",
+      "prenume": "Ghiolban",
+      "parola": "tarc12345",
+      "CNP": "8120221117628",
+      "adresa": "Aiudului",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "72VIVXZ",
+      "user_type": "support",
+      "telefon": "0756422243",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 8,
+      "nume": "Maria",
+      "prenume": "Ghiolban",
+      "parola": "tarc12345",
+      "CNP": "5210202015210",
+      "adresa": "Albiei",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "PVMY520",
+      "user_type": "support",
+      "telefon": "0756435352",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 9,
+      "nume": "Georgina",
+      "prenume": "Tarnaveni",
+      "parola": "tarc12345",
+      "CNP": "8120221448537",
+      "adresa": "Albiei",
+      "oras": "Cluj",
+      "tara": "romania",
+      "proffesional_image": "K37UWD9",
+      "user_type": "support",
+      "telefon": "0756431243",
+      "email": "andree@gmail.com"
+    },
+    {
+      "id": 10,
+      "nume": "Ionel",
+      "prenume": "Ghiolban",
+      "parola": "admin12345",
+      "CNP": "5210202015210",
+      "adresa": "Albiei",
+      "oras": "Cluj",
+      "tara": "romania",
+      "proffesional_image": "K5ZJ9FQ",
+      "user_type": "support",
+      "telefon": "0756435352",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 11,
+      "nume": "Ionel",
+      "prenume": "Roman",
+      "parola": "catamaru",
+      "CNP": "7120225067311",
+      "adresa": "Aiudului",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "5ZLWRVE",
+      "user_type": "support",
+      "telefon": "0756575352",
+      "email": "sabrin@gmail.com"
+    },
+    {
+      "id": 12,
+      "nume": "Maria",
+      "prenume": "Pop",
+      "parola": "abcd54321",
+      "CNP": "5210202015210",
+      "adresa": "Albiei",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "OG9N0GD",
+      "user_type": "admin",
+      "telefon": "0756431243",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 13,
+      "nume": "Maria",
+      "prenume": "Pop",
+      "parola": "catamaru",
+      "CNP": "8120221117628",
+      "adresa": "1 Decembrie 1918",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "774I4W0",
+      "user_type": "normal",
+      "telefon": "0756431243",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 14,
+      "nume": "Ionel",
+      "prenume": "Roman",
+      "parola": "tarc12345",
+      "CNP": "8120221448537",
+      "adresa": "1 Decembrie 1918",
+      "oras": "Cluj",
+      "tara": "romania",
+      "proffesional_image": "3ABNQG1",
+      "user_type": "admin",
+      "telefon": "0753175352",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 15,
+      "nume": "Ionel",
+      "prenume": "Pop",
+      "parola": "catamaru",
+      "CNP": "7120225446313",
+      "adresa": "Albiei",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "SVU63CE",
+      "user_type": "support",
+      "telefon": "0756422243",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 16,
+      "nume": "Georgina",
+      "prenume": "Tarnaveni",
+      "parola": "tarc12345",
+      "CNP": "7120225067311",
+      "adresa": "Alexandru Davila",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "S7A2MFN",
+      "user_type": "support",
+      "telefon": "0756431243",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 17,
+      "nume": "Georgina",
+      "prenume": "Tarnaveni",
+      "parola": "catamaru",
+      "CNP": "8120221117628",
+      "adresa": "1 Decembrie 1918",
+      "oras": "Cluj",
+      "tara": "romania",
+      "proffesional_image": "7PZXJR5",
+      "user_type": "admin",
+      "telefon": "0756435352",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 18,
+      "nume": "Georgina",
+      "prenume": "Ghiolban",
+      "parola": "catamaru",
+      "CNP": "7120225446313",
+      "adresa": "Alesd",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "D5AK6GS",
+      "user_type": "support",
+      "telefon": "0756422243",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 19,
+      "nume": "Georgina",
+      "prenume": "Ghiolban",
+      "parola": "tarc12345",
+      "CNP": "5210202015210",
+      "adresa": "Aiudului",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "XXVRM6H",
+      "user_type": "support",
+      "telefon": "0756575352",
+      "email": "andree@gmail.com"
+    },
+    {
+      "id": 20,
+      "nume": "Georgina",
+      "prenume": "Tarnaveni",
+      "parola": "abcd54321",
+      "CNP": "7120225446313",
+      "adresa": "Alexandru Davila",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "QUCQXYA",
+      "user_type": "normal",
+      "telefon": "0756431243",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 21,
+      "nume": "Maria",
+      "prenume": "Tarnaveni",
+      "parola": "abcd54321",
+      "CNP": "8120221117628",
+      "adresa": "Albiei",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "YF96U6I",
+      "user_type": "admin",
+      "telefon": "0756435352",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 22,
+      "nume": "Georgina",
+      "prenume": "Ghiolban",
+      "parola": "admin12345",
+      "CNP": "7120225446313",
+      "adresa": "Albiei",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "PSNPF75",
+      "user_type": "normal",
+      "telefon": "0753175352",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 23,
+      "nume": "Ionel",
+      "prenume": "Roman",
+      "parola": "abcd54321",
+      "CNP": "8120221448537",
+      "adresa": "Alunului",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "CYXLNFL",
+      "user_type": "admin",
+      "telefon": "0756422243",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 24,
+      "nume": "Maria",
+      "prenume": "Roman",
+      "parola": "catamaru",
+      "CNP": "8120221117628",
+      "adresa": "Alunului",
+      "oras": "Cluj",
+      "tara": "romania",
+      "proffesional_image": "7FC3TB1",
+      "user_type": "normal",
+      "telefon": "0756575352",
+      "email": "rina@gmail.com"
+    },
+    {
+      "id": 25,
+      "nume": "Ionel",
+      "prenume": "Roman",
+      "parola": "abcd54321",
+      "CNP": "5210202015210",
+      "adresa": "Alunului",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "X634L4H",
+      "user_type": "admin",
+      "telefon": "0756435352",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 26,
+      "nume": "Maria",
+      "prenume": "Muresan",
+      "parola": "admin12345",
+      "CNP": "8120221448537",
+      "adresa": "1 Decembrie 1918",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "R2S5ZWY",
+      "user_type": "support",
+      "telefon": "0756431243",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 27,
+      "nume": "Maria",
+      "prenume": "Muresan",
+      "parola": "admin12345",
+      "CNP": "7120225067311",
+      "adresa": "Alunului",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "MNJMJUX",
+      "user_type": "admin",
+      "telefon": "0756422243",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 28,
+      "nume": "Maria",
+      "prenume": "Roman",
+      "parola": "tarc12345",
+      "CNP": "8120221448537",
+      "adresa": "Aiudului",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "N3XBDT0",
+      "user_type": "normal",
+      "telefon": "0756431243",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 29,
+      "nume": "Georgina",
+      "prenume": "Tarnaveni",
+      "parola": "abcd54321",
+      "CNP": "8120221117628",
+      "adresa": "Alunului",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "FUPP2ME",
+      "user_type": "support",
+      "telefon": "0756422243",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 30,
+      "nume": "Ana",
+      "prenume": "Roman",
+      "parola": "catamaru",
+      "CNP": "7120225067311",
+      "adresa": "1 Decembrie 1918",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "KWY0UPW",
+      "user_type": "support",
+      "telefon": "0756575352",
+      "email": "rina@gmail.com"
+    },
+    {
+      "id": 31,
+      "nume": "Georgina",
+      "prenume": "Pop",
+      "parola": "admin12345",
+      "CNP": "8120221117628",
+      "adresa": "Aiudului",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "4RP0NRP",
+      "user_type": "support",
+      "telefon": "0756431243",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 32,
+      "nume": "Maria",
+      "prenume": "Tarnaveni",
+      "parola": "abcd54321",
+      "CNP": "6210202019340",
+      "adresa": "Albiei",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "R2UCAZ7",
+      "user_type": "support",
+      "telefon": "0753175352",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 33,
+      "nume": "Maria",
+      "prenume": "Tarnaveni",
+      "parola": "catamaru",
+      "CNP": "5210202015210",
+      "adresa": "Albiei",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "M42M252",
+      "user_type": "admin",
+      "telefon": "0756422243",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 34,
+      "nume": "Georgina",
+      "prenume": "Ghiolban",
+      "parola": "tarc12345",
+      "CNP": "5210202015210",
+      "adresa": "Albiei",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "HWQO0DD",
+      "user_type": "admin",
+      "telefon": "0756422243",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 35,
+      "nume": "Georgina",
+      "prenume": "Ghiolban",
+      "parola": "admin12345",
+      "CNP": "7120225067311",
+      "adresa": "Albiei",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "LOJ36RT",
+      "user_type": "normal",
+      "telefon": "0756575352",
+      "email": "mihael@gmail.com"
+    },
+    {
+      "id": 36,
+      "nume": "Georgina",
+      "prenume": "Roman",
+      "parola": "catamaru",
+      "CNP": "8120221117628",
+      "adresa": "Alexandru Davila",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "V9JKKZO",
+      "user_type": "admin",
+      "telefon": "0756575352",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 37,
+      "nume": "Maria",
+      "prenume": "Ghiolban",
+      "parola": "tarc12345",
+      "CNP": "7120225446313",
+      "adresa": "Albiei",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "BBOR55H",
+      "user_type": "admin",
+      "telefon": "0753175352",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 38,
+      "nume": "Maria",
+      "prenume": "Muresan",
+      "parola": "admin12345",
+      "CNP": "7120225446313",
+      "adresa": "Alunului",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "S5EHQ4T",
+      "user_type": "support",
+      "telefon": "0756575352",
+      "email": "lana@gmail.com"
+    },
+    {
+      "id": 39,
+      "nume": "Ionel",
+      "prenume": "Muresan",
+      "parola": "admin12345",
+      "CNP": "7120225067311",
+      "adresa": "Alunului",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "XWQ717G",
+      "user_type": "support",
+      "telefon": "0756435352",
+      "email": "rina@gmail.com"
+    },
+    {
+      "id": 40,
+      "nume": "Ana",
+      "prenume": "Muresan",
+      "parola": "catamaru",
+      "CNP": "5210202015210",
+      "adresa": "Alba lulia",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "VI9A3NQ",
+      "user_type": "support",
+      "telefon": "0756575352",
+      "email": "rina@gmail.com"
+    },
+    {
+      "id": 41,
+      "nume": "Ana",
+      "prenume": "Pop",
+      "parola": "admin12345",
+      "CNP": "7120225446313",
+      "adresa": "Albiei",
+      "oras": "constanta",
+      "tara": "romania",
+      "proffesional_image": "EXBXXO3",
+      "user_type": "support",
+      "telefon": "0756435352",
+      "email": "mihael@gmail.com"
+    },
+    {
+      "id": 42,
+      "nume": "Maria",
+      "prenume": "Pop",
+      "parola": "abcd54321",
+      "CNP": "6210202019340",
+      "adresa": "Alba lulia",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "O4S3CYM",
+      "user_type": "admin",
+      "telefon": "0756435352",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 43,
+      "nume": "Maria",
+      "prenume": "Tarnaveni",
+      "parola": "tarc12345",
+      "CNP": "8120221448537",
+      "adresa": "Alexandru Davila",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "475ST2Z",
+      "user_type": "support",
+      "telefon": "0753175352",
+      "email": "geo@yahoo.com"
+    },
+    {
+      "id": 44,
+      "nume": "Ionel",
+      "prenume": "Pop",
+      "parola": "tarc12345",
+      "CNP": "8120221448537",
+      "adresa": "Alexandru Davila",
+      "oras": "Cluj",
+      "tara": "romania",
+      "proffesional_image": "UY771O5",
+      "user_type": "support",
+      "telefon": "0756431243",
+      "email": "rina@gmail.com"
+    },
+    {
+      "id": 45,
+      "nume": "Maria",
+      "prenume": "Roman",
+      "parola": "catamaru",
+      "CNP": "7120225446313",
+      "adresa": "Aiudului",
+      "oras": "sibiu",
+      "tara": "romania",
+      "proffesional_image": "I5KR5SC",
+      "user_type": "normal",
+      "telefon": "0753175352",
+      "email": "mihael@gmail.com"
+    },
+    {
+      "id": 46,
+      "nume": "Ionel",
+      "prenume": "Tarnaveni",
+      "parola": "catamaru",
+      "CNP": "8120221448537",
+      "adresa": "Alesd",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "FHK419R",
+      "user_type": "support",
+      "telefon": "0756575352",
+      "email": "sabrin@gmail.com"
+    },
+    {
+      "id": 47,
+      "nume": "Georgina",
+      "prenume": "Roman",
+      "parola": "abcd54321",
+      "CNP": "8120221117628",
+      "adresa": "Alunului",
+      "oras": "bucuresti",
+      "tara": "romania",
+      "proffesional_image": "U3QT326",
+      "user_type": "admin",
+      "telefon": "0756422243",
+      "email": "gina@gmail.com"
+    },
+    {
+      "id": 48,
+      "nume": "Maria",
+      "prenume": "Muresan",
+      "parola": "catamaru",
+      "CNP": "8120221117628",
+      "adresa": "1 Decembrie 1918",
+      "oras": "Cluj",
+      "tara": "romania",
+      "proffesional_image": "CTVL59C",
+      "user_type": "normal",
+      "telefon": "0756431243",
+      "email": "mihael@gmail.com"
+    },
+    {
+      "id": 49,
+      "nume": "Ionel",
+      "prenume": "Tarnaveni",
+      "parola": "admin12345",
+      "CNP": "8120221117628",
+      "adresa": "1 Decembrie 1918",
+      "oras": "mures",
+      "tara": "romania",
+      "proffesional_image": "G13WHB7",
+      "user_type": "normal",
+      "telefon": "0756575352",
+      "email": "sabrin@gmail.com"
+    }
+  ],
+  "contract": [
+    {
+      "id": 50,
+      "user_id": 9,
+      "contract_type": "nerambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 15,
+      "company_id": 135
+    },
+    {
+      "id": 51,
+      "user_id": 11,
+      "contract_type": "rambursabil",
+      "contract_sum": 30222,
+      "procent_companie": 5,
+      "company_id": 140
+    },
+    {
+      "id": 52,
+      "user_id": 6,
+      "contract_type": "nerambursabil",
+      "contract_sum": 2000,
+      "procent_companie": 5,
+      "company_id": 141
+    },
+    {
+      "id": 53,
+      "user_id": 15,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 13,
+      "company_id": 112
+    },
+    {
+      "id": 54,
+      "user_id": 0,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 30,
+      "company_id": 120
+    },
+    {
+      "id": 55,
+      "user_id": 3,
+      "contract_type": "rambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 5,
+      "company_id": 149
+    },
+    {
+      "id": 56,
+      "user_id": 0,
+      "contract_type": "nerambursabil",
+      "contract_sum": 2000,
+      "procent_companie": 5,
+      "company_id": 146
+    },
+    {
+      "id": 57,
+      "user_id": 0,
+      "contract_type": "nerambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 15,
+      "company_id": 138
+    },
+    {
+      "id": 58,
+      "user_id": 4,
+      "contract_type": "rambursabil",
+      "contract_sum": 3200,
+      "procent_companie": 15,
+      "company_id": 118
+    },
+    {
+      "id": 59,
+      "user_id": 5,
+      "contract_type": "rambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 15,
+      "company_id": 148
+    },
+    {
+      "id": 60,
+      "user_id": 6,
+      "contract_type": "nerambursabil",
+      "contract_sum": 10332,
+      "procent_companie": 15,
+      "company_id": 101
+    },
+    {
+      "id": 61,
+      "user_id": 12,
+      "contract_type": "rambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 30,
+      "company_id": 146
+    },
+    {
+      "id": 62,
+      "user_id": 8,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 12,
+      "company_id": 119
+    },
+    {
+      "id": 63,
+      "user_id": 2,
+      "contract_type": "nerambursabil",
+      "contract_sum": 3200,
+      "procent_companie": 13,
+      "company_id": 145
+    },
+    {
+      "id": 64,
+      "user_id": 14,
+      "contract_type": "rambursabil",
+      "contract_sum": 3200,
+      "procent_companie": 15,
+      "company_id": 139
+    },
+    {
+      "id": 65,
+      "user_id": 8,
+      "contract_type": "nerambursabil",
+      "contract_sum": 30222,
+      "procent_companie": 12,
+      "company_id": 140
+    },
+    {
+      "id": 66,
+      "user_id": 10,
+      "contract_type": "nerambursabil",
+      "contract_sum": 2000,
+      "procent_companie": 30,
+      "company_id": 118
+    },
+    {
+      "id": 67,
+      "user_id": 13,
+      "contract_type": "nerambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 10,
+      "company_id": 103
+    },
+    {
+      "id": 68,
+      "user_id": 4,
+      "contract_type": "rambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 12,
+      "company_id": 139
+    },
+    {
+      "id": 69,
+      "user_id": 15,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 30,
+      "company_id": 141
+    },
+    {
+      "id": 70,
+      "user_id": 13,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 13,
+      "company_id": 120
+    },
+    {
+      "id": 71,
+      "user_id": 3,
+      "contract_type": "rambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 5,
+      "company_id": 136
+    },
+    {
+      "id": 72,
+      "user_id": 11,
+      "contract_type": "rambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 12,
+      "company_id": 128
+    },
+    {
+      "id": 73,
+      "user_id": 15,
+      "contract_type": "rambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 13,
+      "company_id": 103
+    },
+    {
+      "id": 74,
+      "user_id": 11,
+      "contract_type": "rambursabil",
+      "contract_sum": 3200,
+      "procent_companie": 5,
+      "company_id": 111
+    },
+    {
+      "id": 75,
+      "user_id": 10,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 30,
+      "company_id": 136
+    },
+    {
+      "id": 76,
+      "user_id": 4,
+      "contract_type": "rambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 15,
+      "company_id": 135
+    },
+    {
+      "id": 77,
+      "user_id": 14,
+      "contract_type": "rambursabil",
+      "contract_sum": 3200,
+      "procent_companie": 13,
+      "company_id": 144
+    },
+    {
+      "id": 78,
+      "user_id": 15,
+      "contract_type": "rambursabil",
+      "contract_sum": 30222,
+      "procent_companie": 30,
+      "company_id": 121
+    },
+    {
+      "id": 79,
+      "user_id": 8,
+      "contract_type": "rambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 30,
+      "company_id": 133
+    },
+    {
+      "id": 80,
+      "user_id": 12,
+      "contract_type": "rambursabil",
+      "contract_sum": 30222,
+      "procent_companie": 12,
+      "company_id": 125
+    },
+    {
+      "id": 81,
+      "user_id": 9,
+      "contract_type": "nerambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 5,
+      "company_id": 102
+    },
+    {
+      "id": 82,
+      "user_id": 14,
+      "contract_type": "nerambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 13,
+      "company_id": 126
+    },
+    {
+      "id": 83,
+      "user_id": 1,
+      "contract_type": "nerambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 15,
+      "company_id": 110
+    },
+    {
+      "id": 84,
+      "user_id": 2,
+      "contract_type": "nerambursabil",
+      "contract_sum": 2000,
+      "procent_companie": 5,
+      "company_id": 107
+    },
+    {
+      "id": 85,
+      "user_id": 9,
+      "contract_type": "rambursabil",
+      "contract_sum": 10332,
+      "procent_companie": 13,
+      "company_id": 110
+    },
+    {
+      "id": 86,
+      "user_id": 6,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 30,
+      "company_id": 129
+    },
+    {
+      "id": 87,
+      "user_id": 5,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 13,
+      "company_id": 109
+    },
+    {
+      "id": 88,
+      "user_id": 5,
+      "contract_type": "rambursabil",
+      "contract_sum": 30222,
+      "procent_companie": 12,
+      "company_id": 133
+    },
+    {
+      "id": 89,
+      "user_id": 14,
+      "contract_type": "nerambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 12,
+      "company_id": 140
+    },
+    {
+      "id": 90,
+      "user_id": 6,
+      "contract_type": "rambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 13,
+      "company_id": 133
+    },
+    {
+      "id": 91,
+      "user_id": 14,
+      "contract_type": "nerambursabil",
+      "contract_sum": 50000,
+      "procent_companie": 15,
+      "company_id": 138
+    },
+    {
+      "id": 92,
+      "user_id": 3,
+      "contract_type": "nerambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 10,
+      "company_id": 145
+    },
+    {
+      "id": 93,
+      "user_id": 14,
+      "contract_type": "rambursabil",
+      "contract_sum": 30222,
+      "procent_companie": 12,
+      "company_id": 107
+    },
+    {
+      "id": 94,
+      "user_id": 6,
+      "contract_type": "rambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 15,
+      "company_id": 104
+    },
+    {
+      "id": 95,
+      "user_id": 0,
+      "contract_type": "nerambursabil",
+      "contract_sum": 3200,
+      "procent_companie": 15,
+      "company_id": 139
+    },
+    {
+      "id": 96,
+      "user_id": 14,
+      "contract_type": "nerambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 10,
+      "company_id": 145
+    },
+    {
+      "id": 97,
+      "user_id": 11,
+      "contract_type": "rambursabil",
+      "contract_sum": 30000,
+      "procent_companie": 12,
+      "company_id": 133
+    },
+    {
+      "id": 98,
+      "user_id": 2,
+      "contract_type": "nerambursabil",
+      "contract_sum": 1000,
+      "procent_companie": 30,
+      "company_id": 118
+    },
+    {
+      "id": 99,
+      "user_id": 6,
+      "contract_type": "rambursabil",
+      "contract_sum": 10332,
+      "procent_companie": 12,
+      "company_id": 124
+    }
+  ],
+  "company": [
+    {
+      "id": 100,
+      "company_nume": "Tarcinvest",
+      "company_cui": "378532449",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 101,
+      "company_nume": "Caniabets",
+      "company_cui": "378532449",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 102,
+      "company_nume": "Paralex",
+      "company_cui": "37855989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 103,
+      "company_nume": "Starbroker",
+      "company_cui": "52445989",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 104,
+      "company_nume": "Geniuinvest",
+      "company_cui": "378532449",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 105,
+      "company_nume": "Starbroker",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 106,
+      "company_nume": "Caniabets",
+      "company_cui": "378532449",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 107,
+      "company_nume": "Paralex",
+      "company_cui": "378532449",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 108,
+      "company_nume": "Tarcinvest",
+      "company_cui": "52445989",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 109,
+      "company_nume": "Tarcinvest",
+      "company_cui": "37855989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 110,
+      "company_nume": "Carlex",
+      "company_cui": "378532449",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 111,
+      "company_nume": "Geniuinvest",
+      "company_cui": "378532449",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 112,
+      "company_nume": "Geniuinvest",
+      "company_cui": "378532449",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 113,
+      "company_nume": "Tarcinvest",
+      "company_cui": "52445989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 114,
+      "company_nume": "Caniabets",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 115,
+      "company_nume": "Paralex",
+      "company_cui": "37855989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 116,
+      "company_nume": "Geniuinvest",
+      "company_cui": "37855989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 117,
+      "company_nume": "Geniuinvest",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 118,
+      "company_nume": "Caniabets",
+      "company_cui": "378532449",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 119,
+      "company_nume": "Tarcinvest",
+      "company_cui": "378532449",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 120,
+      "company_nume": "Tarcinvest",
+      "company_cui": "52445989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 121,
+      "company_nume": "Caniabets",
+      "company_cui": "378532449",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 122,
+      "company_nume": "Caniabets",
+      "company_cui": "378532449",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 123,
+      "company_nume": "Caniabets",
+      "company_cui": "37855989",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 124,
+      "company_nume": "Geniuinvest",
+      "company_cui": "52445989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 125,
+      "company_nume": "Carlex",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 126,
+      "company_nume": "Carlex",
+      "company_cui": "37855989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 127,
+      "company_nume": "Paralex",
+      "company_cui": "378532449",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 128,
+      "company_nume": "Paralex",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 129,
+      "company_nume": "Geniuinvest",
+      "company_cui": "37855989",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 130,
+      "company_nume": "Paralex",
+      "company_cui": "52445989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 131,
+      "company_nume": "Geniuinvest",
+      "company_cui": "37855989",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 132,
+      "company_nume": "Tarcinvest",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 133,
+      "company_nume": "Carlex",
+      "company_cui": "378532449",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 134,
+      "company_nume": "Caniabets",
+      "company_cui": "378532449",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 135,
+      "company_nume": "Carlex",
+      "company_cui": "37855989",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 136,
+      "company_nume": "Paralex",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 137,
+      "company_nume": "Starbroker",
+      "company_cui": "37855989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 138,
+      "company_nume": "Starbroker",
+      "company_cui": "378532449",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 139,
+      "company_nume": "Starbroker",
+      "company_cui": "378532449",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 140,
+      "company_nume": "Geniuinvest",
+      "company_cui": "37855989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 141,
+      "company_nume": "Paralex",
+      "company_cui": "37855989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 142,
+      "company_nume": "Caniabets",
+      "company_cui": "52445989",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 143,
+      "company_nume": "Paralex",
+      "company_cui": "378532449",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 144,
+      "company_nume": "Tarcinvest",
+      "company_cui": "378532449",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 145,
+      "company_nume": "Tarcinvest",
+      "company_cui": "52445989",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 146,
+      "company_nume": "Caniabets",
+      "company_cui": "52445989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    },
+    {
+      "id": 147,
+      "company_nume": "Starbroker",
+      "company_cui": "378532449",
+      "company_address": "1 Decembrie 1918",
+      "company_tara": "romania"
+    },
+    {
+      "id": 148,
+      "company_nume": "Carlex",
+      "company_cui": "378532449",
+      "company_address": "Alba lulia",
+      "company_tara": "romania"
+    },
+    {
+      "id": 149,
+      "company_nume": "Carlex",
+      "company_cui": "37855989",
+      "company_address": "Aiudului",
+      "company_tara": "romania"
+    }
+  ],
+  "company_trust": [
+    {
+      "id": 150,
+      "user_id": 11,
+      "company_rating": 3,
+      "company_id": 123
+    },
+    {
+      "id": 151,
+      "user_id": 4,
+      "company_rating": 5,
+      "company_id": 117
+    },
+    {
+      "id": 152,
+      "user_id": 11,
+      "company_rating": 1,
+      "company_id": 128
+    },
+    {
+      "id": 153,
+      "user_id": 5,
+      "company_rating": 5,
+      "company_id": 123
+    },
+    {
+      "id": 154,
+      "user_id": 13,
+      "company_rating": 1,
+      "company_id": 145
+    },
+    {
+      "id": 155,
+      "user_id": 11,
+      "company_rating": 4,
+      "company_id": 100
+    },
+    {
+      "id": 156,
+      "user_id": 2,
+      "company_rating": 5,
+      "company_id": 103
+    },
+    {
+      "id": 157,
+      "user_id": 14,
+      "company_rating": 4,
+      "company_id": 105
+    },
+    {
+      "id": 158,
+      "user_id": 2,
+      "company_rating": 4,
+      "company_id": 139
+    },
+    {
+      "id": 159,
+      "user_id": 11,
+      "company_rating": 2,
+      "company_id": 145
+    },
+    {
+      "id": 160,
+      "user_id": 13,
+      "company_rating": 1,
+      "company_id": 115
+    },
+    {
+      "id": 161,
+      "user_id": 4,
+      "company_rating": 5,
+      "company_id": 131
+    },
+    {
+      "id": 162,
+      "user_id": 2,
+      "company_rating": 5,
+      "company_id": 122
+    },
+    {
+      "id": 163,
+      "user_id": 5,
+      "company_rating": 1,
+      "company_id": 148
+    },
+    {
+      "id": 164,
+      "user_id": 5,
+      "company_rating": 1,
+      "company_id": 115
+    },
+    {
+      "id": 165,
+      "user_id": 15,
+      "company_rating": 3,
+      "company_id": 118
+    },
+    {
+      "id": 166,
+      "user_id": 0,
+      "company_rating": 2,
+      "company_id": 144
+    },
+    {
+      "id": 167,
+      "user_id": 12,
+      "company_rating": 5,
+      "company_id": 121
+    },
+    {
+      "id": 168,
+      "user_id": 2,
+      "company_rating": 3,
+      "company_id": 118
+    },
+    {
+      "id": 169,
+      "user_id": 7,
+      "company_rating": 3,
+      "company_id": 141
+    },
+    {
+      "id": 170,
+      "user_id": 8,
+      "company_rating": 5,
+      "company_id": 113
+    },
+    {
+      "id": 171,
+      "user_id": 14,
+      "company_rating": 4,
+      "company_id": 109
+    },
+    {
+      "id": 172,
+      "user_id": 8,
+      "company_rating": 1,
+      "company_id": 118
+    },
+    {
+      "id": 173,
+      "user_id": 15,
+      "company_rating": 1,
+      "company_id": 100
+    },
+    {
+      "id": 174,
+      "user_id": 11,
+      "company_rating": 1,
+      "company_id": 105
+    },
+    {
+      "id": 175,
+      "user_id": 7,
+      "company_rating": 2,
+      "company_id": 144
+    },
+    {
+      "id": 176,
+      "user_id": 6,
+      "company_rating": 1,
+      "company_id": 122
+    },
+    {
+      "id": 177,
+      "user_id": 6,
+      "company_rating": 1,
+      "company_id": 113
+    },
+    {
+      "id": 178,
+      "user_id": 1,
+      "company_rating": 5,
+      "company_id": 122
+    },
+    {
+      "id": 179,
+      "user_id": 4,
+      "company_rating": 5,
+      "company_id": 100
+    },
+    {
+      "id": 180,
+      "user_id": 1,
+      "company_rating": 5,
+      "company_id": 141
+    },
+    {
+      "id": 181,
+      "user_id": 15,
+      "company_rating": 2,
+      "company_id": 135
+    },
+    {
+      "id": 182,
+      "user_id": 2,
+      "company_rating": 3,
+      "company_id": 133
+    },
+    {
+      "id": 183,
+      "user_id": 12,
+      "company_rating": 1,
+      "company_id": 106
+    },
+    {
+      "id": 184,
+      "user_id": 2,
+      "company_rating": 4,
+      "company_id": 134
+    },
+    {
+      "id": 185,
+      "user_id": 9,
+      "company_rating": 5,
+      "company_id": 126
+    },
+    {
+      "id": 186,
+      "user_id": 12,
+      "company_rating": 1,
+      "company_id": 145
+    },
+    {
+      "id": 187,
+      "user_id": 6,
+      "company_rating": 5,
+      "company_id": 137
+    },
+    {
+      "id": 188,
+      "user_id": 7,
+      "company_rating": 1,
+      "company_id": 141
+    },
+    {
+      "id": 189,
+      "user_id": 3,
+      "company_rating": 4,
+      "company_id": 138
+    },
+    {
+      "id": 190,
+      "user_id": 3,
+      "company_rating": 5,
+      "company_id": 133
+    },
+    {
+      "id": 191,
+      "user_id": 15,
+      "company_rating": 1,
+      "company_id": 145
+    },
+    {
+      "id": 192,
+      "user_id": 2,
+      "company_rating": 4,
+      "company_id": 122
+    },
+    {
+      "id": 193,
+      "user_id": 2,
+      "company_rating": 3,
+      "company_id": 129
+    },
+    {
+      "id": 194,
+      "user_id": 3,
+      "company_rating": 2,
+      "company_id": 113
+    },
+    {
+      "id": 195,
+      "user_id": 5,
+      "company_rating": 2,
+      "company_id": 115
+    },
+    {
+      "id": 196,
+      "user_id": 11,
+      "company_rating": 5,
+      "company_id": 137
+    },
+    {
+      "id": 197,
+      "user_id": 7,
+      "company_rating": 3,
+      "company_id": 149
+    },
+    {
+      "id": 198,
+      "user_id": 3,
+      "company_rating": 5,
+      "company_id": 128
+    },
+    {
+      "id": 199,
+      "user_id": 11,
+      "company_rating": 1,
+      "company_id": 113
+    }
+  ]
+}

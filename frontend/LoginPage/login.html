@@ -1,0 +1,59 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=8;IE=edge,chrome=1">
+	<title>Euro Contracts  - Login</title>
+</head>
+<body class="log">
+	<div id="outer", style="position: relative;left: -10px;top: -7px">
+		<div id="header" style="background: rgb(152, 218, 152); vertical-align: middle;">
+			<div class='title-script'>Euro Contracts</div>
+		</div><!-- end header -->
+		<div id="wrapper" class="container">
+			<div id="masthead">
+				<h1>
+					Bine ai venit la Euro Contracts
+				</h1>
+			</div>
+			<div id="log-container">
+				<div class="lefte">
+					<form action="Controller" id="login-form" class="module top" method="post">
+						<p>
+							<label for="username">Email</label>
+              <input type="text" class="field save-state nonAsciiChars-validated" id="username" maxlength="12" value=""/>
+              <label for="password">Parola</label>
+							<input type="password" class="field save-state nonAsciiChars-validated" id="password" maxlength="12" value=""/>
+						</p>
+						<span style="color:red;">Wrong email or password!</span>
+							<p class="hidden">
+								<label for="password">Cod de autentificare</label>
+								<input type="text" class="field" id="authentication-code" disabled="disabled" />
+						</p>
+								<p>
+									<input type="submit" class="button small normalbtns" value="Continua &raquo;" style="background: rgb(152, 218, 152);" />
+									<input type="submit" class="button small normalbtns loginbtn" value="Inregistrare &raquo;" style="background: rgb(152, 218, 152);" />
+						</p>
+									<span class="hidden restoredState"></span>
+			</form>
+			<div class="module secure">
+				<p>Cum imi pot proteja de frauda
+						contul?</p>
+			</div>
+				</div>
+			</div>
+			<div id="errors-modal" class="dialog-message dialog hidden empty" title="Eroare">
+				<div class="message">
+					<p style="word-wrap: break-word;"></p>
+					<span class="hidden hidden-value" id="error-field-value"></span>
+				</div>
+				<div class="submit-container">
+					<a id="close-errors-modal" href="javascript:void(0);" class="button small">Anuleaza</a>
+				</div>
+			</div>
+		</div><!-- end wrapper -->
+	</div><!-- end outer -->
+</body>
+</html>

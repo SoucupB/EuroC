@@ -1,0 +1,62 @@
+{
+  "frameworks": "Node",
+  "database": "sqlite",
+  "totalNumber": 50,
+  "tables": {
+    "user": {
+      "nume": "text",
+      "prenume": "text",
+      "parola": "text",
+      "CNP": "text",
+      "adresa": "text",
+      "oras": "text",
+      "tara": "text",
+      "proffesional_image": "text",
+      "user_type": "text",
+      "telefon": "text",
+      "email": "text"
+    },
+    "contract": {
+      "user_id": "number",
+      "contract_type": "text",
+      "contract_sum": "number",
+      "procent_companie": "number"
+    },
+    "company": {
+      "company_nume": "text",
+      "company_cui": "text",
+      "company_address": "text",
+      "company_tara": "text"
+    },
+    "company_trust": {
+      "user_id": "number",
+      "company_rating" : "number"
+    }
+  },
+  "randomness": {
+    "nume": ["Ana", "Maria", "Georgina", "Ionel"],
+    "prenume": ["Pop", "Roman", "Tarnaveni", "Muresan", "Ghiolban"],
+    "parola": ["catamaru", "tarc12345", "abcd54321", "admin12345"],
+    "telefon": ["0756435352", "0756575352", "0756431243", "0753175352", "0756422243"],
+    "CNP": ["6210202019340", "5210202015210", "7120225067311", "7120225446313", "8120221448537", "8120221117628"],
+    "tara": ["romania"],
+    "user_type": ["support", "normal", "admin"],
+    "adresa": ["1 Decembrie 1918", "Aiudului", "Alba lulia", "Albiei", "Alesd", "Albiei", "Alexandru Davila", "Alunului"],
+    "oras": ["Cluj", "bucuresti", "constanta", "sibiu", "mures"],
+    "email": ["lana@gmail.com", "geo@yahoo.com", "rina@gmail.com", "gina@gmail.com", "mihael@gmail.com", "tano@gmail.com", "andree@gmail.com", "sabrin@gmail.com"],
+    "user_id": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "contract_type": ["rambursabil", "nerambursabil"],
+    "contract_sum": [1000, 3200, 2000, 50000, 30000, 30222, 10332],
+    "procent_companie": [5, 10, 15, 30, 12, 13],
+    "company_nume": ["Carlex", "Starbroker", "Caniabets", "Paralex", "Geniuinvest", "Tarcinvest"],
+    "company_cui": ["37855989", "378532449", "52445989"],
+    "company_address": ["1 Decembrie 1918", "Aiudului", "Alba lulia"],
+    "company_trust": [5, 4, 5, 3, 4, 5],
+    "company_rating": [1, 2, 3, 4, 5],
+    "company_tara": ["romania"]
+  },
+  "belongs": {
+    "contract": "company",
+    "company_trust": "company"
+  }
+}

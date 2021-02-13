@@ -1,0 +1,68 @@
+.loginbox {
+  position: relative;
+  background-color: rgb(233, 233, 233);
+  height: 500px;
+  width: 800px;
+  top: 50px;
+  left: calc(50% - 400px);
+  border-radius: 25px;
+}
+
+.label-loginbox {
+  font-weight: bold;
+  font-size: 26px;
+  position: relative;
+}
+
+.inside-objects {
+  position: absolute;
+  left: 30px;
+}
+
+.input-class {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.input-class-email {
+  top: 100px;
+}
+
+.input-class-password {
+  top: 200px;
+}
+
+.label-email {
+  top: 50px;
+}
+
+.label-parola {
+  top: 150px;
+}
+
+.button-class {
+  position: relative;
+  background-color: rgb(43, 187, 43);
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  text-align: center;
+  border: 4px solid green;
+  font-size: 17px;
+}
+
+.text-vertical-center {
+  position: relative;
+  top: calc(50% - 16px);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: white;
+}
+
+.button-class-position {
+  top: 250px;
+}
+
+.register {
+  top: 270px;
+}

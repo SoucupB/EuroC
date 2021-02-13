@@ -1,0 +1,38 @@
+{
+  "database": "sqlite3",
+  "api": {
+    "user": {
+      "C": "/register",
+      "R": "/show_users"
+    },
+    "contract": {
+      "C": "/writeContract",
+      "R": "/readContract"
+    },
+    "company": {
+      "C": "/company",
+      "R": "/company"
+    },
+    "user_contract": {
+      "C": "/writeContracts",
+      "R": "/getContracts"
+    }
+  },
+  "delete": {
+    "user": {
+      "R": ["parola", "id", "CNP"],
+      "C": ["parola", "id", "CNP"]
+    },
+    "contract": {
+      "R": ["id", "user_id", "company_id"],
+      "C": ["id", "user_id", "company_id"]
+    },
+    "company": {
+      "R": ["id"],
+      "C": ["id"]
+    }
+  },
+  "belongs": {
+    "user_contract": "company"
+  }
+}
