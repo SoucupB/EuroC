@@ -1,4 +1,3 @@
-import './css/App.css';
 import Navbar from './Navbar'
 import Loginbox from './Loginbox'
 

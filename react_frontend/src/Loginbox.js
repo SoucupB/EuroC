@@ -1,6 +1,8 @@
 import React from 'react'
 import './css/Loginpage.css';
 import _uniqueId from 'lodash/uniqueId';
+import ReactDOM from 'react-dom';
+import Companyform from './Companyform'
 
 const boxClass = "loginbox"
 const labelClass = "label-loginbox"
@@ -14,7 +16,7 @@ const absolute = "inside-objects"
 const middleText = "text-vertical-center"
 const buttonPoss = "button-class-position"
 const registerClass = "register"
-import {Redirect} from 'react-router';
+
 
 export default function Loginbox({buttonLogin, buttonRegister}) {
   let emailId;
@@ -44,19 +46,37 @@ export default function Loginbox({buttonLogin, buttonRegister}) {
     return document.getElementById(getParolaId()).value
   }
 
-  const loginFunction = function() {
+  const loginFunction = async function() {
+    const requestOptions = {
+      method: 'post',
+      mode:"cors",
+      headers: {
+        "Content-type":"application/json;charset=utf-8"
+      },
+      body: JSON.stringify({ user: {email: "lana@gmail.com", parola: "admin12345"} })
+    };
     console.log(getEmail(), getPasword());
-    return <Redirect  to="/posts/" />
+    const response = await fetch('http://localhost:8000/login', requestOptions);
+    const data = await response.json();
+    console.log(data)
+    ReactDOM.render(
+      Companyform(),
+      document.getElementById('root')
+    );
   };
 
-  return (
-    <div className = {boxClass}>
-      <label className = {[absolute, labelClass, labelUsername].join(' ')}>Email</label>
-      <input id = {getEmailId()} className = {[absolute, classInput, inputEmail].join(' ')} type="email"/>
-      <label className = {[absolute, labelClass, labelParola].join(' ')}>Parola</label>
-      <input id = {getParolaId()} className = {[absolute, classInput, inputPassword].join(' ')} type="password"/>
-      <div onClick = {loginFunction} className = {[absolute, buttonClass, buttonPoss].join(' ')}><p className={middleText}>{buttonLogin}</p></div>
-      <div className = {[absolute, buttonClass, buttonPoss, registerClass].join(' ')}><p className={middleText}>{buttonRegister}</p></div>
-    </div>
-  )
+  const loginForm = function() {
+    return (
+      <div className = {boxClass}>
+        <label className = {[absolute, labelClass, labelUsername].join(' ')}>Email</label>
+        <input id = {getEmailId()} className = {[absolute, classInput, inputEmail].join(' ')} type="email"/>
+        <label className = {[absolute, labelClass, labelParola].join(' ')}>Parola</label>
+        <input id = {getParolaId()} className = {[absolute, classInput, inputPassword].join(' ')} type="password"/>
+        <div onClick = {loginFunction} className = {[absolute, buttonClass, buttonPoss].join(' ')}><p className={middleText}>{buttonLogin}</p></div>
+        <div className = {[absolute, buttonClass, buttonPoss, registerClass].join(' ')}><p className={middleText}>{buttonRegister}</p></div>
+      </div>
+    )
+  }
+
+  return loginForm()
 }
