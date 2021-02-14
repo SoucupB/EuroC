@@ -9,6 +9,7 @@ import Specbutton from './Specbutton'
 const boxClass = "loginbox"
 const bigform = 'big-class'
 const absolute = "inside-objects"
+const registerButton = "register-button"
 
 export default class Registerform extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export default class Registerform extends Component {
   }
 
   showData() {
-    console.log("FDSFDSFSD")
+    console.log("DADGG")
   }
 
   render() {
@@ -42,8 +43,8 @@ export default class Registerform extends Component {
         <Navbar title={"Register Form"}/>
         <div className = {[boxClass, bigform].join(' ')}>
           {this.getLabels(this.labelsName)}
+          <Specbutton className = {[absolute, registerButton].join(' ')} onClickListener = {this.showData} name = {"Register"}></Specbutton>
         </div>
-        {/* <Specbutton onClickListener = {this.showData} name = {"Caca"}></Specbutton> */}
       </div>
     )
   }
