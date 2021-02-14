@@ -160,7 +160,6 @@ export default class Registerform extends Component {
 
   showData() {
     let req = this.registerRequest()
-    console.log(req)
     if(!req["Error"]) {
       this.registerRequestHttp(req)
     }
