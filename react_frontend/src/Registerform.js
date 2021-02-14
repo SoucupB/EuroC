@@ -17,7 +17,7 @@ export default class Registerform extends Component {
     this.state = {
       something: true
     };
-    this.styleType = {"font-weight": "bold", "font-size": "26px", position: "relative", left: "30px"}
+    this.styleType = {fontWeight: "bold", fontSize: "26px", position: "relative", left: "30px"}
     this.labelsName = ['Email', 'Parola', 'Gen', "Varsta", "Prenume", "CNP", "Adresa", "Oras", "Tara", "Telefon"]
     this.dataMaping = {}
   }
@@ -25,10 +25,10 @@ export default class Registerform extends Component {
   getLabels(labels) {
     let value = [];
     for(let i = 0; i < labels.length; i++) {
-      value.push(<div style={this.styleType}>{labels[i]}</div>)
+      value.push(<div key = {getRandomID()} style={this.styleType}>{labels[i]}</div>)
       let randomKey = getRandomID()
       this.dataMaping[labels[i]] = randomKey;
-      value.push(<input style={this.styleType} id = {randomKey}></input>)
+      value.push(<input key = {getRandomID()} style={this.styleType} id = {randomKey}></input>)
     }
     return <div style = {{position: "relative", top: "50px"}}>{value}</div>
   }
