@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import Companyform from './Companyform'
 import Registerform from './Registerform'
 import Specbutton from './Specbutton'
+import functionMap from './scripts/HttpScripts'
 
 const boxClass = "loginbox"
 const labelClass = "label-loginbox"
@@ -20,8 +21,9 @@ const buttonPoss = "button-class-position"
 const registerClass = "register"
 const errorClass = 'error-message'
 
-class Loginbox extends React.Component {
+let loginFormHttp = functionMap["loginFormHttp"]
 
+class Loginbox extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -58,16 +60,7 @@ class Loginbox extends React.Component {
   }
 
   async loginFunction(email, parola) {
-    const requestOptions = {
-      method: 'post',
-      mode:"cors",
-      headers: {
-        "Content-type":"application/json;charset=utf-8"
-      },
-      body: JSON.stringify({ user: {email: email, parola: parola} })
-    };
-    const response = await fetch('http://localhost:8000/login', requestOptions);
-    const data = await response.json();
+    const data = await loginFormHttp(email, parola)
     if(data['Error'] !== "No such record exists!") {
       localStorage.setItem("token", data["client"])
       ReactDOM.render(
