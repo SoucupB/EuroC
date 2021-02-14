@@ -132,9 +132,9 @@ var http = require('http')
 var app = express();
 var cors = require('cors');
 const fs = require('fs');
-const jwt = require('./encoder')
 const { normalize } = require('path');
-app.use(cors({origin: 'http://' + metadata["ip"] + ':' + metadata["port"]}));
+
+app.use(cors());
 var bodyParser = require('body-parser')
 var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -162,7 +162,7 @@ app.get('/show_users', function(req, res){
 app.post('/login', jsonParser, function(req, res){
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.setHeader('Access-Control-Allow-Credentials', true);
   console.log("Request done at operation /login!");
   if(req.body.user.email == undefined || req.body.user.parola == undefined) {

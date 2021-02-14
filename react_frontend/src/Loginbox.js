@@ -3,6 +3,8 @@ import './css/Loginpage.css';
 import _uniqueId from 'lodash/uniqueId';
 import ReactDOM from 'react-dom';
 import Companyform from './Companyform'
+import Registerform from './Registerform'
+import Specbutton from './Specbutton'
 
 const boxClass = "loginbox"
 const labelClass = "label-loginbox"
@@ -16,67 +18,105 @@ const absolute = "inside-objects"
 const middleText = "text-vertical-center"
 const buttonPoss = "button-class-position"
 const registerClass = "register"
+const errorClass = 'error-message'
 
+class Loginbox extends React.Component {
 
-export default function Loginbox({buttonLogin, buttonRegister}) {
-  let emailId;
-  let parolaId;
+  constructor(props) {
+    super(props)
+    this.state = {}
+    this.emailId = 0;
+    this.parolaId = 0;
+    this.state = {
+      isLogged: false,
+      failLoggin: false
+    };
+  }
 
-  const getEmailId = function() {
-    if(emailId) {
-      return emailId;
+  getEmailId() {
+    if(this.emailId) {
+      return this.emailId;
     }
-    emailId = _uniqueId('')
-    return emailId
+    this.emailId = _uniqueId('')
+    return this.emailId
   }
 
-  const getParolaId = function() {
-    if(parolaId) {
-      return parolaId;
+  getParolaId() {
+    if(this.parolaId) {
+      return this.parolaId;
     }
-    parolaId = _uniqueId('')
-    return parolaId
+    this.parolaId = _uniqueId('')
+    return this.parolaId
   }
 
-  const getEmail = function() {
-    return document.getElementById(getEmailId()).value
+  getEmail() {
+    return document.getElementById(this.getEmailId()).value
   }
 
-  const getPasword = function() {
-    return document.getElementById(getParolaId()).value
+  getPasword() {
+    return document.getElementById(this.getParolaId()).value
   }
 
-  const loginFunction = async function() {
+  async loginFunction(email, parola) {
     const requestOptions = {
       method: 'post',
       mode:"cors",
       headers: {
         "Content-type":"application/json;charset=utf-8"
       },
-      body: JSON.stringify({ user: {email: "lana@gmail.com", parola: "admin12345"} })
+      body: JSON.stringify({ user: {email: email, parola: parola} })
     };
-    console.log(getEmail(), getPasword());
     const response = await fetch('http://localhost:8000/login', requestOptions);
     const data = await response.json();
-    console.log(data)
-    ReactDOM.render(
-      Companyform(),
-      document.getElementById('root')
-    );
+    if(data['Error'] !== "No such record exists!") {
+      localStorage.setItem("token", data["client"])
+      ReactDOM.render(
+        <Companyform />,
+        document.getElementById('root')
+      );
+    }
+    else {
+      this.setState({failLoggin: true})
+    }
   };
 
-  const loginForm = function() {
+  registerForm() {
+    ReactDOM.render(
+      <Registerform />,
+      document.getElementById('root')
+    );
+  }
+
+  loginFunctionNormal(event) {
+    const email = this.getEmail();
+    const parola = this.getPasword();
+    this.loginFunction(email, parola)
+  }
+
+  errorMessage(message) {
+    if(this.state.failLoggin) {
+      return <span className = {[absolute, errorClass].join(' ')}>{message}</span>
+    }
+    return ''
+  }
+
+  loginForm() {
     return (
       <div className = {boxClass}>
         <label className = {[absolute, labelClass, labelUsername].join(' ')}>Email</label>
-        <input id = {getEmailId()} className = {[absolute, classInput, inputEmail].join(' ')} type="email"/>
+        <input id = {this.getEmailId()} className = {[absolute, classInput, inputEmail].join(' ')} type="email"/>
         <label className = {[absolute, labelClass, labelParola].join(' ')}>Parola</label>
-        <input id = {getParolaId()} className = {[absolute, classInput, inputPassword].join(' ')} type="password"/>
-        <div onClick = {loginFunction} className = {[absolute, buttonClass, buttonPoss].join(' ')}><p className={middleText}>{buttonLogin}</p></div>
-        <div className = {[absolute, buttonClass, buttonPoss, registerClass].join(' ')}><p className={middleText}>{buttonRegister}</p></div>
+        <input id = {this.getParolaId()} className = {[absolute, classInput, inputPassword].join(' ')} type="password"/>
+        {this.errorMessage("Wrong email or password!")}
+        <Specbutton className = {[absolute, buttonPoss].join(' ')} onClickListener = {this.loginFunctionNormal.bind(this)} name = {this.props.buttonLogin}></Specbutton>
+        <Specbutton className = {[absolute, buttonPoss, registerClass].join(' ')} onClickListener = {this.registerForm.bind(this)} name = {this.props.buttonRegister}></Specbutton>
       </div>
     )
   }
 
-  return loginForm()
+  render() {
+    return this.loginForm();
+  }
 }
+
+export default Loginbox;

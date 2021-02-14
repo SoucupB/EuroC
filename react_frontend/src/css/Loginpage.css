@@ -40,6 +40,16 @@
   top: 150px;
 }
 
+.big-class {
+  height: 800px;
+}
+
+.error-message {
+  color: red;
+  font-size: 21px;
+  top: 239px;
+}
+
 .button-class {
   position: relative;
   background-color: rgb(43, 187, 43);
@@ -65,9 +75,9 @@
 }
 
 .button-class-position {
-  top: 250px;
+  top: 280px;
 }
 
 .register {
-  top: 270px;
+  top: 300px;
 }
