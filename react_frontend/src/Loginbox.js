@@ -1,6 +1,6 @@
 import React from 'react'
 import './css/Loginpage.css';
-import _uniqueId from 'lodash/uniqueId';
+import getRandomID from './scripts/RandomKey';
 import ReactDOM from 'react-dom';
 import Companyform from './Companyform'
 import Registerform from './Registerform'
@@ -37,7 +37,7 @@ class Loginbox extends React.Component {
     if(this.emailId) {
       return this.emailId;
     }
-    this.emailId = _uniqueId('')
+    this.emailId = getRandomID()
     return this.emailId
   }
 
@@ -45,7 +45,7 @@ class Loginbox extends React.Component {
     if(this.parolaId) {
       return this.parolaId;
     }
-    this.parolaId = _uniqueId('')
+    this.parolaId = getRandomID()
     return this.parolaId
   }
 

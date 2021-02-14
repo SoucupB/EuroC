@@ -3,35 +3,33 @@ import React, { Component } from 'react'
 import './css/Loginpage.css';
 import './css/Registerpage.css';
 import ReactDOM from 'react-dom';
-import _uniqueId from 'lodash/uniqueId';
+import getRandomID from './scripts/RandomKey';
 import Specbutton from './Specbutton'
 
 const boxClass = "loginbox"
-const labelClass = "label-loginbox"
-const classInput = "input-class"
-const labelParola = 'label-parola'
-const labelUsername = 'label-email'
-const inputEmail = 'input-class-email'
-const inputPassword = 'input-class-password'
-const buttonClass = 'button-class'
-const absolute = "inside-objects"
-const middleText = "text-vertical-center"
-const buttonPoss = "button-class-position"
-const registerClass = "register"
-const errorClass = 'error-message'
 const bigform = 'big-class'
-const registerForm = 'register-page'
+const absolute = "inside-objects"
 
 export default class Registerform extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      something: true
+    };
+    this.styleType = {"font-weight": "bold", "font-size": "26px", position: "relative", left: "30px"}
+    this.labelsName = ['Email', 'Parola', 'Gen', "Varsta", "Prenume", "CNP", "Adresa", "Oras", "Tara", "Telefon"]
+    this.dataMaping = {}
+  }
 
   getLabels(labels) {
     let value = [];
     for(let i = 0; i < labels.length; i++) {
-      value.push(<div>DSADASDAS</div>)
-      value.push(<button>DSADASDAS</button>)
+      value.push(<div style={this.styleType}>{labels[i]}</div>)
+      let randomKey = getRandomID()
+      this.dataMaping[labels[i]] = randomKey;
+      value.push(<input style={this.styleType} id = {randomKey}></input>)
     }
-    console.log(value)
-    return value
+    return <div style = {{position: "relative", top: "50px"}}>{value}</div>
   }
 
   showData() {
@@ -43,9 +41,9 @@ export default class Registerform extends Component {
       <div>
         <Navbar title={"Register Form"}/>
         <div className = {[boxClass, bigform].join(' ')}>
-          {this.getLabels('ana', 'mere', 'gay')}
+          {this.getLabels(this.labelsName)}
         </div>
-        <Specbutton onClickListener = {this.showData} name = {"Caca"}></Specbutton>
+        {/* <Specbutton onClickListener = {this.showData} name = {"Caca"}></Specbutton> */}
       </div>
     )
   }
