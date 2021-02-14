@@ -188,7 +188,7 @@ app.post('/register', jsonParser, function(req, res){
     res.json({"Error": "body with name 'user' is not present!"});
     return 0;
   }
-  record = create("user", req.body["user"], ['parola', 'id', 'CNP'])
+  record = create("user", req.body["user"], ['parola', 'CNP'])
   if(record !== undefined) {
     res.json({"user": record});
   }

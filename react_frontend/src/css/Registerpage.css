@@ -5,3 +5,8 @@
 .register-button {
   top: 90px;
 }
+
+.error-message-register {
+  top: 850px;
+  color: red;
+}
