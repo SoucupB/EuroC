@@ -44,7 +44,7 @@ let StarFunction = function({number, of, top, left}) {
   )
 }
 
-let CompanyFormSlice = function({objId, title, type, location, number}) {
+let CompanyFormSlice = function({objId, title, type, location, number, cmp_id}) {
   return (
     <div id = {objId} key = {getRandomID()} className = {shadowBox}>
       <div className = {[companyBox].join(' ')}>
@@ -59,6 +59,8 @@ let CompanyFormSlice = function({objId, title, type, location, number}) {
         <div className = {locationPosition}>{location}</div>
         <StarFunction number = {number} left = {600} top = {-55} of = {5} />
         <div className = {locationStarPosition}></div>
+        <div className = {[companyHeader, companyTextStyle].join(' ')} style = {{fontSize: "15px", position: "absolute",
+                                                                                 left: "480px", top: "55px", fontWeight: "bold"}}>{"ID " + cmp_id}</div>
       </div>
     </div>
   )
@@ -112,7 +114,7 @@ class Companyform extends React.Component {
       for(let i = 0; i < this.companyData['company'].length; i++) {
         data.push(<CompanyFormSlice objId = {getRandomID()} title = {this.companyData['company'][i]['company_nume']}
                   type = {this.companyData['company'][i]['company_type']} location = {this.companyData['company'][i]['company_tara'] + ", " + this.companyData['company'][i]['company_address']}
-                  number = {this.stars[this.companyData['company'][i]['id']]} />)
+                  number = {this.stars[this.companyData['company'][i]['id']]} cmp_id = {this.companyData['company'][i]['id']} />)
       }
       return data
     }

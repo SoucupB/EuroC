@@ -96,7 +96,7 @@ export default class LeftBar extends Component {
   companiesForm() {
     const token = localStorage.getItem('token')
     if(token) {
-      return <BarButton title = 'Companies' onClickCaller = {this.companies} />
+      return <BarButton title = 'My Companies' onClickCaller = {this.companies} />
     }
     return ''
   }
