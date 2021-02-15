@@ -19,7 +19,7 @@ let getCompanyByToken = async function() {
 
 let getSponsorableByToken= async function() {
   let token = localStorage.getItem('token')
-  const response = await fetch('http://localhost:8000/companyUser?showOtherCompanies=' + token);
+  const response = await fetch('http://localhost:8000/showOtherCompanies?token=' + token);
   return await response.json();
 }
 

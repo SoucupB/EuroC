@@ -101,13 +101,20 @@ export default class LeftBar extends Component {
     return ''
   }
 
+  allCompaniesButton() {
+    ReactDOM.render(
+      <Companyform useAll = {"true"} />,
+      document.getElementById('root')
+    );
+  }
+
   async getAllCompaniesAsync() {
     const type = await getUserType()
-    this.setState({isSponsor: true})
     if(type["type"] === 'sponsor') {
       const token = localStorage.getItem('token')
       if(token) {
-        this.allComps = <BarButton title = 'All Companies' onClickCaller = {this.companies} />
+        this.allComps = <BarButton title = 'All Companies' onClickCaller = {this.allCompaniesButton} />
+        this.setState({isSponsor: true})
       }
     }
     return ''

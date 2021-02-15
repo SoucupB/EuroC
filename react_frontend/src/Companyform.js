@@ -68,7 +68,8 @@ class Companyform extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      dataLoaded: false
+      dataLoaded: false,
+      reloaded: false
     };
     this.loadCompanyData()
     this.companyData = {}
@@ -78,12 +79,28 @@ class Companyform extends React.Component {
   async getStars() {
     for(let i = 0; i < this.companyData['company'].length; i++) {
       const starC = await getStars(this.companyData['company'][i]['id'])
-      this.stars[this.companyData['company'][i]['id']] = starC['company_trust']
+      if(this.companyData && this.companyData['company'] && this.companyData['company'][i] && this.companyData['company'][i]['id']) {
+        this.stars[this.companyData['company'][i]['id']] = starC['company_trust']
+      }
     }
   }
 
+  componentDidMount() {
+
+  }
+
+  componentDidUpdate() {
+    this.loadCompanyData()
+  }
+
   async loadCompanyData() {
-    let dataCompany = await getCompanyByToken()
+    let dataCompany;
+    if(this.props.useAll === "true") {
+      dataCompany = await getSponsorableByToken()
+    }
+    else {
+      dataCompany = await getCompanyByToken()
+    }
     this.companyData = dataCompany
     await this.getStars()
     this.setState({dataLoaded: true})
