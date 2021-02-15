@@ -51,5 +51,28 @@ let createCompany = async function(company) {
   return data;
 }
 
+let createContract = async function(contract) {
+  const requestOptions = {
+    method: 'post',
+    mode: "cors",
+    headers: {
+      "Content-type":"application/json;charset=utf-8"
+    },
+    body: JSON.stringify(contract)
+  };
+  let token = localStorage.getItem("token")
+  const response = await fetch('http://localhost:8000/writeContracts/user_contract?token=' + token, requestOptions);
+  let data = await response.json();
+  console.log(data)
+  return data;
+}
+
+let getContractData = async function(param_id) {
+  let token = localStorage.getItem('token')
+  const response = await fetch('http://localhost:8000/getContracts/user_contract?param_id=' + param_id);
+  return await response.json();
+}
+
 export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken,
-                "getStars": getStars, "createCompany": createCompany, "getUserType": getUserType, "getSponsorableByToken": getSponsorableByToken}
+                "getStars": getStars, "createCompany": createCompany, "getUserType": getUserType, "getSponsorableByToken": getSponsorableByToken,
+                "createContract": createContract, "getContractData": getContractData}

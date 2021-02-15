@@ -6,6 +6,7 @@ import Registerform from './Registerform'
 import Companyform from './Companyform'
 import Createcompany from './Createcompany'
 import functionMap from './scripts/HttpScripts'
+import Contractform from './Contractform'
 
 const leftBar = 'left-bar'
 const leftBarLine = 'line'
@@ -108,6 +109,23 @@ export default class LeftBar extends Component {
     );
   }
 
+  createContract() {
+    ReactDOM.render(
+      <Contractform />,
+      document.getElementById('root')
+    );
+  }
+
+  makeContract() {
+    if(this.state.isSponsor) {
+      const token = localStorage.getItem('token')
+      if(token) {
+        return <BarButton title = 'Make Contract' onClickCaller = {this.createContract} />
+      }
+    }
+    return ''
+  }
+
   async getAllCompaniesAsync() {
     const type = await getUserType()
     if(type["type"] === 'sponsor') {
@@ -138,6 +156,7 @@ export default class LeftBar extends Component {
         {this.companiesForm()}
         {this.createCompanyForm()}
         {this.getAllCompanies()}
+        {this.makeContract()}
       </div>
     )
   }

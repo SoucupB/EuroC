@@ -9,6 +9,7 @@ import LeftBar from './LeftBar'
 const getCompanyByToken = functionMap['getCompanyByToken']
 const getStars = functionMap['getStars']
 const getSponsorableByToken = functionMap['getSponsorableByToken']
+const getContractData = functionMap['getContractData']
 
 const boxClass = "loginbox"
 const companyBox = "company-form"
@@ -44,7 +45,15 @@ let StarFunction = function({number, of, top, left}) {
   )
 }
 
-let CompanyFormSlice = function({objId, title, type, location, number, cmp_id}) {
+let sumMoney = function(sum) {
+  if(sum) {
+    return <span className = {[companyHeader, companyTextStyle].join(' ')} style = {{color: "green", fontSize: "15px", position: "absolute",
+                                                                           left: "580px", top: "55px", fontWeight: "bold"}}>Contract total: ${sum}</span>
+  }
+  return ''
+}
+
+let CompanyFormSlice = function({objId, title, type, location, number, cmp_id, contract_money}) {
   return (
     <div id = {objId} key = {getRandomID()} className = {shadowBox}>
       <div className = {[companyBox].join(' ')}>
@@ -61,6 +70,7 @@ let CompanyFormSlice = function({objId, title, type, location, number, cmp_id}) 
         <div className = {locationStarPosition}></div>
         <div className = {[companyHeader, companyTextStyle].join(' ')} style = {{fontSize: "15px", position: "absolute",
                                                                                  left: "480px", top: "55px", fontWeight: "bold"}}>{"ID " + cmp_id}</div>
+        {sumMoney(contract_money)}
       </div>
     </div>
   )
@@ -76,9 +86,10 @@ class Companyform extends React.Component {
     this.loadCompanyData()
     this.companyData = {}
     this.stars = {}
+    this.allContracts = {}
   }
 
-  async getStars() {
+  async getStarsType() {
     for(let i = 0; i < this.companyData['company'].length; i++) {
       const starC = await getStars(this.companyData['company'][i]['id'])
       if(this.companyData && this.companyData['company'] && this.companyData['company'][i] && this.companyData['company'][i]['id']) {
@@ -87,12 +98,21 @@ class Companyform extends React.Component {
     }
   }
 
-  componentDidMount() {
+  async getContractsType() {
+    for(let i = 0; i < this.companyData['company'].length; i++) {
+      const starC = await getContractData(this.companyData['company'][i]['id'])
+      if(Object.keys(starC['user_contract']).length) {
+        this.allContracts[this.companyData['company'][i]['id']] = starC['user_contract']['contract_sum']
+      }
+    }
+  }
 
+  componentDidMount() {
+    this.loadCompanyData()
   }
 
   componentDidUpdate() {
-    this.loadCompanyData()
+
   }
 
   async loadCompanyData() {
@@ -104,7 +124,8 @@ class Companyform extends React.Component {
       dataCompany = await getCompanyByToken()
     }
     this.companyData = dataCompany
-    await this.getStars()
+    await this.getStarsType()
+    await this.getContractsType()
     this.setState({dataLoaded: true})
   }
 
@@ -114,7 +135,7 @@ class Companyform extends React.Component {
       for(let i = 0; i < this.companyData['company'].length; i++) {
         data.push(<CompanyFormSlice objId = {getRandomID()} title = {this.companyData['company'][i]['company_nume']}
                   type = {this.companyData['company'][i]['company_type']} location = {this.companyData['company'][i]['company_tara'] + ", " + this.companyData['company'][i]['company_address']}
-                  number = {this.stars[this.companyData['company'][i]['id']]} cmp_id = {this.companyData['company'][i]['id']} />)
+                  number = {this.stars[this.companyData['company'][i]['id']]} cmp_id = {this.companyData['company'][i]['id']} contract_money = {this.allContracts[this.companyData['company'][i]['id']]}/>)
       }
       return data
     }

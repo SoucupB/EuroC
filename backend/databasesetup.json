@@ -20,7 +20,8 @@
       "user_id": "number",
       "contract_type": "text",
       "contract_sum": "number",
-      "procent_companie": "number"
+      "procent_companie": "number",
+      "company_contractor_id": "number"
     },
     "company": {
       "company_nume": "text",

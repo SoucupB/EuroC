@@ -169,6 +169,14 @@ function createBy(tableName, data, accData, parent_table, parent_table_id) {
   return getBy(maxId, tableName, accData)
 }
 
+function createContract(user_id, funds, type, first_cmp_id, second_cmp_id, procent) {
+  var maxId = getMaxId("contract") + 1;
+  var query = "INSERT INTO contract VALUES (" + maxId + ", " + user_id + ", '" + type + "', " + funds + ", " + procent + ", " + second_cmp_id + ", " + first_cmp_id + ")";
+  console.log(query)
+  sqlite3.run(query)
+  return getBy(maxId, "contract", [])
+}
+
 function createCompanyBy(tableName, data, accData, parent_table, parent_table_id, company_type) {
   var maxId = getMaxId(tableName) + 1;
   var positions = "(";
@@ -456,21 +464,13 @@ app.post('/company', jsonParser, function(req, res){
   }
 });
 
-app.get('/getContracts/:param_id/user_contract', function(req, res){
+app.get('/getContracts/user_contract', function(req, res){
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
   console.log("Request done at operation /getContracts!");
-  if(req.query.id == undefined) {
-    res.json({"user_contract": getAllByRelation("company", "user_contract", req.params.param_id)});
-    return 0;
-  }
-  if(req.params.param_id == undefined || !exists("company", req.params.param_id)) {
-    res.json({"Error": "No record 'company' with this id exists!"});
-    return 0;
-  }
-  record = getBy(req.query.id, "user_contract", [])
+  record = getByAttr({"company_contractor_id": parseInt(req.query.param_id)}, "contract", [])
   if(record !== undefined) {
     res.json({"user_contract": record});
   }
@@ -479,7 +479,7 @@ app.get('/getContracts/:param_id/user_contract', function(req, res){
   }
 });
 
-app.post('/writeContracts/:param_id/user_contract', jsonParser, function(req, res){
+app.post('/writeContracts/user_contract', jsonParser, function(req, res){
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
@@ -489,7 +489,11 @@ app.post('/writeContracts/:param_id/user_contract', jsonParser, function(req, re
     res.json({"Error": "body with name 'user_contract' is not present!"});
     return 0;
   }
-  record = create("user_contract", req.body["user_contract"], [])
+  let token = req.query.token;
+  let userId = decoder(token).id
+  let dataProd = getBy(userId, "user", [])
+  console.log(req.query.param_id)
+  record = createContract(userId, req.body['user_contract']['funds'], req.body['user_contract']['type'], req.body['user_contract']['param_id'], req.body['user_contract']['second_cmp_id'], req.body['user_contract']['procent'])
   if(record !== undefined) {
     res.json({"user_contract": record});
   }
