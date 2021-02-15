@@ -6,6 +6,7 @@ import './css/CompanySlice.css';
 import functionMap from './scripts/HttpScripts'
 
 const getCompanyByToken = functionMap['getCompanyByToken']
+const getStars = functionMap['getStars']
 
 const boxClass = "loginbox"
 const companyBox = "company-form"
@@ -69,11 +70,20 @@ class Companyform extends React.Component {
     };
     this.loadCompanyData()
     this.companyData = {}
+    this.stars = {}
+  }
+
+  async getStars() {
+    for(let i = 0; i < this.companyData['company'].length; i++) {
+      const starC = await getStars(this.companyData['company'][i]['id'])
+      this.stars[this.companyData['company'][i]['id']] = starC['company_trust']
+    }
   }
 
   async loadCompanyData() {
     let dataCompany = await getCompanyByToken()
     this.companyData = dataCompany
+    await this.getStars()
     this.setState({dataLoaded: true})
   }
 
@@ -81,9 +91,9 @@ class Companyform extends React.Component {
     if(this.state.dataLoaded) {
       let data = []
       for(let i = 0; i < this.companyData['company'].length; i++) {
-        console.log('this.companyData')
         data.push(<CompanyFormSlice objId = {getRandomID()} title = {this.companyData['company'][i]['company_nume']}
-                  type = "Productie" location = {this.companyData['company'][i]['company_tara'] + ", " + this.companyData['company'][i]['company_address']} number = {4} />)
+                  type = "Productie" location = {this.companyData['company'][i]['company_tara'] + ", " + this.companyData['company'][i]['company_address']}
+                  number = {this.stars[this.companyData['company'][i]['id']]} />)
       }
       return data
     }

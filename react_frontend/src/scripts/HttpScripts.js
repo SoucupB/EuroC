@@ -17,4 +17,10 @@ let getCompanyByToken = async function() {
   return await response.json();
 }
 
-export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken}
+let getStars = async function(company_id) {
+  let token = localStorage.getItem('token')
+  const response = await fetch('http://localhost:8000/getStars?company_id=' + company_id);
+  return await response.json();
+}
+
+export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken, "getStars": getStars}

@@ -107,13 +107,15 @@ function where(attribute, tableName, data) {
     if(typeof attribute[pairs] === 'string')
       stringToCompile += pairs + " = '" + attribute[pairs] + "'"
     else
-    stringToCompile += pairs + " = " + attribute[pairs]
+      stringToCompile += pairs + " = " + attribute[pairs]
     index += 1
   }
   let query = 'SELECT * FROM ' + tableName + ' WHERE ' + stringToCompile;
   let values = sqlite3.run(query);
+  let dataR = {}
+  dataR[tableName] = []
   if(!values.length) {
-    return {};
+    return dataR;
   }
   return values
 }
@@ -283,9 +285,56 @@ app.get('/companyUser', function(req, res){
   console.log("Request done at operation /company!");
   let token = req.query.token;
   let user_id = decoder(token).id
-  record = where({user_id: user_id}, "company", ['id'])
+  record = where({user_id: user_id}, "company", [])
   if(record !== undefined) {
     res.json({"company": record});
+  }
+  else {
+    res.json({"Error": "No such record exists!"});
+  }
+});
+
+app.get('/getStars', function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  console.log("Request done at operation /company!");
+  let company_id = req.query.company_id;
+  record = where({company_id: parseInt(company_id)}, "company_trust", ['id'])
+  let stars = 0;
+  if(record !== undefined) {
+    res.json({"company_trust": 0});
+    return 0;
+  }
+  for(let i = 0; i < record['company_trust'].length; i++) {
+    stars += record['company_trust'][i]['company_rating']
+  }
+  if(!record['company_trust'].length) {
+    res.json({"company_trust": 0});
+    return 0;
+  }
+  if(record !== undefined) {
+    res.json({"company_trust": Math.floor(stars / record['company_trust'].length)});
+  }
+  else {
+    res.json({"Error": "No such record exists!"});
+  }
+});
+
+app.get('/show_likes', function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  console.log("Request done at operation /company_trust!");
+  if(req.query.id == undefined) {
+    res.json({"company_trust": getAll("company_trust", ['id'])});
+    return 0;
+  }
+  record = getBy(req.query.id, "company_trust", ['id'])
+  if(record !== undefined) {
+    res.json({"company_trust": record});
   }
   else {
     res.json({"Error": "No such record exists!"});
