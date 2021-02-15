@@ -328,6 +328,40 @@ app.get('/company', function(req, res){
   }
 });
 
+app.get('/userType', function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  console.log("Request done at operation /company!");
+  let token = req.query.token;
+  let userId = decoder(token).id
+  let dataProd = getBy(userId, "user", [])
+  if(dataProd !== undefined) {
+    res.json({"type": dataProd.user_type});
+  }
+  else {
+    res.json({"Error": "No such record exists!"});
+  }
+});
+
+app.get('/showOtherCompanies', function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  console.log("Request done at operation /company!");
+  let token = req.query.token;
+  let userId = decoder(token).id
+  record = where({"company_type": "Piata"}, "company", ['id'])
+  if(record !== undefined) {
+    res.json({"company": record});
+  }
+  else {
+    res.json({"Error": "No such record exists!"});
+  }
+});
+
 app.get('/companyUser', function(req, res){
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');

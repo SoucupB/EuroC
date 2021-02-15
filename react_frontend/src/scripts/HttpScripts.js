@@ -17,9 +17,21 @@ let getCompanyByToken = async function() {
   return await response.json();
 }
 
+let getSponsorableByToken= async function() {
+  let token = localStorage.getItem('token')
+  const response = await fetch('http://localhost:8000/companyUser?showOtherCompanies=' + token);
+  return await response.json();
+}
+
 let getStars = async function(company_id) {
   let token = localStorage.getItem('token')
   const response = await fetch('http://localhost:8000/getStars?company_id=' + company_id);
+  return await response.json();
+}
+
+let getUserType = async function(company_id) {
+  let token = localStorage.getItem('token')
+  const response = await fetch('http://localhost:8000/userType?token=' + token);
   return await response.json();
 }
 
@@ -39,4 +51,5 @@ let createCompany = async function(company) {
   return data;
 }
 
-export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken, "getStars": getStars, "createCompany": createCompany}
+export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken,
+                "getStars": getStars, "createCompany": createCompany, "getUserType": getUserType, "getSponsorableByToken": getSponsorableByToken}

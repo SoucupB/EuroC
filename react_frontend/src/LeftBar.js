@@ -5,11 +5,14 @@ import Loginbox from './Loginbox';
 import Registerform from './Registerform'
 import Companyform from './Companyform'
 import Createcompany from './Createcompany'
+import functionMap from './scripts/HttpScripts'
 
 const leftBar = 'left-bar'
 const leftBarLine = 'line'
 const normalDrop = 'normal-drop'
 const titleClass = 'title-class'
+
+const getUserType = functionMap['getUserType']
 
 function BarButton({title, onClickCaller}) {
   return (
@@ -24,8 +27,10 @@ export default class LeftBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      dataLoaded: false
+      dataLoaded: false,
+      isSponsor: false
     };
+    this.allComps = undefined
   }
 
   register() {
@@ -80,14 +85,52 @@ export default class LeftBar extends Component {
     return ''
   }
 
+  createCompanyForm() {
+    const token = localStorage.getItem('token')
+    if(token) {
+      return <BarButton title = 'Create Company' onClickCaller = {this.createCompanies} />
+    }
+    return ''
+  }
+
+  companiesForm() {
+    const token = localStorage.getItem('token')
+    if(token) {
+      return <BarButton title = 'Companies' onClickCaller = {this.companies} />
+    }
+    return ''
+  }
+
+  async getAllCompaniesAsync() {
+    const type = await getUserType()
+    this.setState({isSponsor: true})
+    if(type["type"] === 'sponsor') {
+      const token = localStorage.getItem('token')
+      if(token) {
+        this.allComps = <BarButton title = 'All Companies' onClickCaller = {this.companies} />
+      }
+    }
+    return ''
+  }
+
+  getAllCompanies() {
+    if(this.state.isSponsor) {
+      return this.allComps
+    }
+    else {
+      this.getAllCompaniesAsync()
+    }
+  }
+
   render() {
     return (
       <div className = {leftBar}>
         {this.logoutForm()}
         {this.loginForm()}
         <BarButton title = 'Register' onClickCaller = {this.register} />
-        <BarButton title = 'Companies' onClickCaller = {this.companies} />
-        <BarButton title = 'Create Company' onClickCaller = {this.createCompanies} />
+        {this.companiesForm()}
+        {this.createCompanyForm()}
+        {this.getAllCompanies()}
       </div>
     )
   }

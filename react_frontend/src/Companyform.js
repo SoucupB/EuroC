@@ -8,6 +8,7 @@ import LeftBar from './LeftBar'
 
 const getCompanyByToken = functionMap['getCompanyByToken']
 const getStars = functionMap['getStars']
+const getSponsorableByToken = functionMap['getSponsorableByToken']
 
 const boxClass = "loginbox"
 const companyBox = "company-form"
