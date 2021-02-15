@@ -25,6 +25,7 @@
     "company": {
       "company_nume": "text",
       "company_cui": "text",
+      "company_type": "text",
       "company_address": "text",
       "company_tara": "text"
     },

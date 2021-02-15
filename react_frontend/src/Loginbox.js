@@ -33,6 +33,12 @@ class Loginbox extends React.Component {
       isLogged: false,
       failLoggin: false
     };
+    if(localStorage.getItem("token")) {
+      ReactDOM.render(
+        <Companyform />,
+        document.getElementById('root')
+      );
+    }
   }
 
   getEmailId() {
