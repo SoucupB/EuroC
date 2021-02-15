@@ -396,19 +396,16 @@ app.get('/getStars', function(req, res){
   let company_id = req.query.company_id;
   record = where({company_id: parseInt(company_id)}, "company_trust", ['id'])
   let stars = 0;
-  if(record !== undefined) {
+  console.log(record)
+  if(record === undefined || !record.length) {
     res.json({"company_trust": 0});
     return 0;
   }
-  for(let i = 0; i < record['company_trust'].length; i++) {
-    stars += record['company_trust'][i]['company_rating']
-  }
-  if(!record['company_trust'].length) {
-    res.json({"company_trust": 0});
-    return 0;
+  for(let i = 0; i < record.length; i++) {
+    stars += record[i]['company_rating']
   }
   if(record !== undefined) {
-    res.json({"company_trust": Math.floor(stars / record['company_trust'].length)});
+    res.json({"company_trust": Math.floor(stars / record.length)});
   }
   else {
     res.json({"Error": "No such record exists!"});
