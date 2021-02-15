@@ -129,7 +129,7 @@ export default class Createcompany extends Component {
     let data = await createCompany(req)
     if(data["company"]) {
       ReactDOM.render(
-        <Companyform />,
+        <Companyform use = {{"g": "partial"}} />,
         document.getElementById('root')
       );
     }

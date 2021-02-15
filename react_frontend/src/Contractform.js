@@ -131,7 +131,7 @@ export default class Contractform extends Component {
     let data = await createContract(req)
     if(data["user_contract"]) {
       ReactDOM.render(
-        <Companyform />,
+        <Companyform use = {{"g": "partial"}} />,
         document.getElementById('root')
       );
     }

@@ -72,7 +72,7 @@ class Loginbox extends React.Component {
     if(data['Error'] !== "No such record exists!") {
       localStorage.setItem("token", data["client"])
       ReactDOM.render(
-        <Companyform />,
+        <Companyform use = {{"g": "partial"}}/>,
         document.getElementById('root')
       );
     }
