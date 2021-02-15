@@ -97,6 +97,27 @@ function getByAttr(attribute, tableName, data) {
   return cut(values[0], data)
 }
 
+function where(attribute, tableName, data) {
+  let stringToCompile = "";
+  let index = 0;
+  for (pairs in attribute) {
+    if(index) {
+      stringToCompile += " AND "
+    }
+    if(typeof attribute[pairs] === 'string')
+      stringToCompile += pairs + " = '" + attribute[pairs] + "'"
+    else
+    stringToCompile += pairs + " = " + attribute[pairs]
+    index += 1
+  }
+  let query = 'SELECT * FROM ' + tableName + ' WHERE ' + stringToCompile;
+  let values = sqlite3.run(query);
+  if(!values.length) {
+    return {};
+  }
+  return values
+}
+
 function create(tableName, data, accData) {
   var maxId = getMaxId(tableName) + 1;
   var positions = "(";
@@ -246,6 +267,23 @@ app.get('/company', function(req, res){
     return 0;
   }
   record = getBy(req.query.id, "company", ['id'])
+  if(record !== undefined) {
+    res.json({"company": record});
+  }
+  else {
+    res.json({"Error": "No such record exists!"});
+  }
+});
+
+app.get('/companyUser', function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  console.log("Request done at operation /company!");
+  let token = req.query.token;
+  let user_id = decoder(token).id
+  record = where({user_id: user_id}, "company", ['id'])
   if(record !== undefined) {
     res.json({"company": record});
   }

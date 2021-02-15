@@ -14,7 +14,7 @@
 }
 
 .company-shadow-box {
-  height: 130px;
+  height: 110px;
   width: 860px;
   left: 10px;
   top: 5px;
@@ -27,7 +27,7 @@
 }
 
 .company-title {
-  font-size: 35px;
+  font-size: 20px;
   font-style: oblique;
   left: 30px;
   top: 4px;
@@ -35,14 +35,14 @@
 
 .company-type {
   font-size: 14px;
-  top: 7px;
+  top: 31px;
   left: 45px;
 }
 
 .company-type-icon {
   position: relative;
   left: 28px;
-  top: -13px;
+  top: 10px;
 }
 
 .pin-position {
@@ -76,7 +76,7 @@
 .locations-name {
   position: absolute;
   left: 250px;
-  top: -70px;
+  top: 55px;
 }
 
 .rating-date {
@@ -87,4 +87,10 @@
 
 .checked {
   color: orange;
+}
+
+.position-like {
+  position: relative;
+  left: 580px;
+  top: -76px;
 }

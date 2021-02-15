@@ -11,4 +11,10 @@ let loginFormHttp = async function(email, parola) {
   return await response.json();
 }
 
-export default {"loginFormHttp": loginFormHttp}
+let getCompanyByToken = async function() {
+  let token = localStorage.getItem('token')
+  const response = await fetch('http://localhost:8000/companyUser?token=' + token);
+  return await response.json();
+}
+
+export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken}
