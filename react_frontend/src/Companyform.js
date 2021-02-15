@@ -93,7 +93,7 @@ class Companyform extends React.Component {
       let data = []
       for(let i = 0; i < this.companyData['company'].length; i++) {
         data.push(<CompanyFormSlice objId = {getRandomID()} title = {this.companyData['company'][i]['company_nume']}
-                  type = "Productie" location = {this.companyData['company'][i]['company_tara'] + ", " + this.companyData['company'][i]['company_address']}
+                  type = {this.companyData['company'][i]['company_type']} location = {this.companyData['company'][i]['company_tara'] + ", " + this.companyData['company'][i]['company_address']}
                   number = {this.stars[this.companyData['company'][i]['id']]} />)
       }
       return data
@@ -104,7 +104,7 @@ class Companyform extends React.Component {
   render() {
     return (
       <div>
-        <Navbar title="Companies"/>
+        <Navbar title="Euro Contracts"/>
         <LeftBar />
         <div className = {[boxClass, companyWindow].join(' ')} style = {{borderRadius: '0px', width: "900px", height: "800px"}}>
           {this.showCompanyForms()}

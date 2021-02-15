@@ -144,6 +144,31 @@ function create(tableName, data, accData) {
   return getBy(maxId, tableName, accData)
 }
 
+function createBy(tableName, data, accData, parent_table, parent_table_id) {
+  var maxId = getMaxId(tableName) + 1;
+  var positions = "(";
+  var values = "(";
+  var index = 0;
+  let clone = JSON.parse(JSON.stringify(data));
+  clone['id'] = maxId;
+  clone[parent_table + '_id'] = parent_table_id
+  for(keys in clone) {
+    if(index) {
+      positions += ', ';
+      values += ', '
+    }
+    positions += keys;
+    if(typeof clone[keys] === 'string')
+      values += "'" + clone[keys] + "'"
+    else
+      values += clone[keys]
+    index++;
+  }
+  var query = "INSERT INTO " + tableName + " " + positions + ") VALUES " + values + ")";
+  sqlite3.run(query)
+  return getBy(maxId, tableName, accData)
+}
+
 function getAllByRelation(parent_table, child_table, parent_id) {
   var query = "SELECT * FROM " + child_table + " WHERE " + parent_table + "_id = " + parent_id;
   let values = sqlite3.run(query);
@@ -351,7 +376,9 @@ app.post('/company', jsonParser, function(req, res){
     res.json({"Error": "body with name 'company' is not present!"});
     return 0;
   }
-  record = create("company", req.body["company"], ['id'])
+  let token = req.query.token;
+  let userId = decoder(token).id
+  record = createBy("company", req.body["company"], [], 'user', userId)
   if(record !== undefined) {
     res.json({"company": record});
   }
