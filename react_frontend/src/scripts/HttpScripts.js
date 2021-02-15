@@ -23,4 +23,20 @@ let getStars = async function(company_id) {
   return await response.json();
 }
 
-export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken, "getStars": getStars}
+let createCompany = async function(company) {
+  const requestOptions = {
+    method: 'post',
+    mode: "cors",
+    headers: {
+      "Content-type":"application/json;charset=utf-8"
+    },
+    body: JSON.stringify(company)
+  };
+  let token = localStorage.getItem("token")
+  const response = await fetch('http://localhost:8000/company?token=' + token, requestOptions);
+  let data = await response.json();
+  console.log(data)
+  return data;
+}
+
+export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken, "getStars": getStars, "createCompany": createCompany}

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Loginbox from './Loginbox';
 import Registerform from './Registerform'
 import Companyform from './Companyform'
+import Createcompany from './Createcompany'
 
 const leftBar = 'left-bar'
 const leftBarLine = 'line'
@@ -42,6 +43,13 @@ export default class LeftBar extends Component {
     );
   }
 
+  login() {
+    ReactDOM.render(
+      <Loginbox buttonLogin = {"Continue"} buttonRegister = {"Register"}/>,
+      document.getElementById('root')
+    );
+  }
+
   companies() {
     ReactDOM.render(
       <Companyform />,
@@ -51,18 +59,35 @@ export default class LeftBar extends Component {
 
   createCompanies() {
     ReactDOM.render(
-      <div></div>,
+      <Createcompany />,
       document.getElementById('root')
     );
+  }
+
+  logoutForm() {
+    const token = localStorage.getItem('token')
+    if(token) {
+      return <BarButton title = 'Logout' onClickCaller = {this.logout} />
+    }
+    return ''
+  }
+
+  loginForm() {
+    const token = localStorage.getItem('token')
+    if(!token) {
+      return <BarButton title = 'Login' onClickCaller = {this.login} />
+    }
+    return ''
   }
 
   render() {
     return (
       <div className = {leftBar}>
-        <BarButton title = 'Logout' onClickCaller = {this.logout} />
+        {this.logoutForm()}
+        {this.loginForm()}
         <BarButton title = 'Register' onClickCaller = {this.register} />
         <BarButton title = 'Companies' onClickCaller = {this.companies} />
-        <BarButton title = 'Create Companies' onClickCaller = {this.createCompanies} />
+        <BarButton title = 'Create Company' onClickCaller = {this.createCompanies} />
       </div>
     )
   }

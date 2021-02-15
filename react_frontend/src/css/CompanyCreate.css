@@ -1,0 +1,9 @@
+.company-create {
+  position: relative;
+  background-color: rgb(233, 233, 233);
+  height: 500px;
+  width: 800px;
+  top: 50px;
+  left: calc(50% - 400px);
+  border-radius: 25px;
+}

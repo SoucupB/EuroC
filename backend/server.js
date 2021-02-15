@@ -169,6 +169,32 @@ function createBy(tableName, data, accData, parent_table, parent_table_id) {
   return getBy(maxId, tableName, accData)
 }
 
+function createCompanyBy(tableName, data, accData, parent_table, parent_table_id, company_type) {
+  var maxId = getMaxId(tableName) + 1;
+  var positions = "(";
+  var values = "(";
+  var index = 0;
+  let clone = JSON.parse(JSON.stringify(data));
+  clone['id'] = maxId;
+  clone[parent_table + '_id'] = parent_table_id
+  clone['company_type'] = company_type
+  for(keys in clone) {
+    if(index) {
+      positions += ', ';
+      values += ', '
+    }
+    positions += keys;
+    if(typeof clone[keys] === 'string')
+      values += "'" + clone[keys] + "'"
+    else
+      values += clone[keys]
+    index++;
+  }
+  var query = "INSERT INTO " + tableName + " " + positions + ") VALUES " + values + ")";
+  sqlite3.run(query)
+  return getBy(maxId, tableName, accData)
+}
+
 function getAllByRelation(parent_table, child_table, parent_id) {
   var query = "SELECT * FROM " + child_table + " WHERE " + parent_table + "_id = " + parent_id;
   let values = sqlite3.run(query);
@@ -378,7 +404,16 @@ app.post('/company', jsonParser, function(req, res){
   }
   let token = req.query.token;
   let userId = decoder(token).id
-  record = createBy("company", req.body["company"], [], 'user', userId)
+  let dataProd = getBy(userId, "user", [])
+  let prodType = "";
+  if(dataProd["user_type"] === "normal") {
+    prodType = 'Piata'
+  }
+  else if(dataProd["user_type"] === "sponsor") {
+    prodType = 'Sponsor'
+  }
+  console.log(prodType, dataProd)
+  record = createCompanyBy("company", req.body["company"], [], 'user', userId, prodType)
   if(record !== undefined) {
     res.json({"company": record});
   }

@@ -2,6 +2,7 @@ import Navbar from './Navbar'
 import React, { Component } from 'react'
 import './css/Loginpage.css';
 import './css/Registerpage.css';
+import './css/CompanyCreate.css';
 import ReactDOM from 'react-dom';
 import getRandomID from './scripts/RandomKey';
 import Specbutton from './Specbutton'
@@ -9,11 +10,12 @@ import Companyform from './Companyform'
 import functionMap from './scripts/HttpScripts'
 import LeftBar from './LeftBar'
 
-const boxClass = "loginbox"
+const boxClass = "company-create"
 const bigform = 'big-class'
 const absolute = "inside-objects"
 const registerButton = "register-button"
 const regError = "error-message-register"
+const regTotalError = 'error-message-create'
 
 const errorMessages = {
   normal: 0,
@@ -23,9 +25,9 @@ const errorMessages = {
   serverError: 4
 }
 
-let loginFormHttp = functionMap["loginFormHttp"]
+let createCompany = functionMap["createCompany"]
 
-export default class Registerform extends Component {
+export default class Createcompany extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -33,19 +35,17 @@ export default class Registerform extends Component {
       errorMessage: ""
     };
     this.styleType = {fontWeight: "bold", fontSize: "26px", position: "relative", left: "30px"}
-    this.labelsName = ['Email', 'Parola', "Prenume", "CNP", "Adresa", "Oras", "Tara", "Telefon", "Tip", "Nume"]
+    this.labelsName = ['Company Name', 'Company CUI', "Company Billing Address", "Company Country"]
     this.dataMaping = {}
     this.bodyField = {}
     this.toLowerString();
   }
 
   toLowerString() {
-    for(let i = 0; i < this.labelsName.length; i++) {
-      this.bodyField[this.labelsName[i]] = this.labelsName[i].toLowerCase()
-    }
-    this.bodyField["Tip"] = 'user_type'
-    this.bodyField["CNP"] = 'CNP'
-    this.bodyField["cnp"] = 'CNP'
+    this.bodyField["Company Name"] = 'company_nume'
+    this.bodyField["Company CUI"] = 'company_cui'
+    this.bodyField["Company Billing Address"] = 'company_address'
+    this.bodyField["Company Country"] = 'company_tara'
   }
 
   validateEmail(email) {
@@ -62,16 +62,6 @@ export default class Registerform extends Component {
   correctField(key, value) {
     if(value === "" || value === undefined) {
       return {"Error": "Fields are empty!", "ErrorState": errorMessages['missingField']};
-    }
-    if(key === "Email") {
-      if(!this.validateEmail(value)) {
-        return {"Error": "Email format is wrong!", "ErrorState": errorMessages['wrongEmail']};
-      }
-    }
-    if(key === "Tip") {
-      if(!(value === "normal" || value === "admin" || value === "sponsor")) {
-        return {"Error": "Tipurile permise sunt sponsor sau normal!", "ErrorState": errorMessages['wrongType']};
-      }
     }
     return 1;
   }
@@ -102,7 +92,7 @@ export default class Registerform extends Component {
   }
 
   registerRequest() {
-    let bodyRequest = { "user": {} };
+    let bodyRequest = { "company": {} };
     let dataToSave = {}
     let errorState = undefined;
     for(let i = 0; i < this.labelsName.length; i++) {
@@ -113,7 +103,7 @@ export default class Registerform extends Component {
       if(valueChecker != 1) {
         errorState = valueChecker
       }
-      bodyRequest["user"][this.bodyField[this.labelsName[i]]] = fieldData
+      bodyRequest["company"][this.bodyField[this.labelsName[i]]] = fieldData
     }
     this.presave(dataToSave)
     if(errorState) {
@@ -136,19 +126,8 @@ export default class Registerform extends Component {
   }
 
   async registerRequestHttp(req) {
-    const requestOptions = {
-      method: 'post',
-      mode: "cors",
-      headers: {
-        "Content-type":"application/json;charset=utf-8"
-      },
-      body: JSON.stringify({ user: req["user"] })
-    };
-    const response = await fetch('http://localhost:8000/register', requestOptions);
-    const data = await response.json();
-    if(data["user"]) {
-      const loginFormData = await loginFormHttp(req["user"]['email'], req["user"]['parola'])
-      localStorage.setItem("token", loginFormData["client"])
+    let data = await createCompany(req)
+    if(data["company"]) {
       ReactDOM.render(
         <Companyform />,
         document.getElementById('root')
@@ -168,7 +147,7 @@ export default class Registerform extends Component {
 
   errorMessage() {
     if(this.state.errorState != errorMessages['normal']) {
-      return <span className = {[absolute, regError].join(' ')}>{this.state.errorMessage}</span>
+      return <span className = {[absolute, regTotalError].join(' ')}>{this.state.errorMessage}</span>
     }
     return '';
   }
@@ -181,7 +160,7 @@ export default class Registerform extends Component {
         <div className = {[boxClass, bigform].join(' ')}>
           {this.getLabels(this.labelsName)}
           {this.errorMessage()}
-          <Specbutton className = {[absolute, registerButton].join(' ')} onClickListener = {this.showData.bind(this)} name = {"Register"}></Specbutton>
+          <Specbutton className = {[absolute, registerButton].join(' ')} onClickListener = {this.showData.bind(this)} name = {"Create"}></Specbutton>
         </div>
       </div>
     )
