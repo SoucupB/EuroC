@@ -4,6 +4,7 @@ import getRandomID from './scripts/RandomKey';
 import './css/Loginpage.css';
 import './css/CompanySlice.css';
 import functionMap from './scripts/HttpScripts'
+import LeftBar from './LeftBar'
 
 const getCompanyByToken = functionMap['getCompanyByToken']
 const getStars = functionMap['getStars']
@@ -104,6 +105,7 @@ class Companyform extends React.Component {
     return (
       <div>
         <Navbar title="Companies"/>
+        <LeftBar />
         <div className = {[boxClass, companyWindow].join(' ')} style = {{borderRadius: '0px', width: "900px", height: "800px"}}>
           {this.showCompanyForms()}
         </div>

@@ -6,7 +6,6 @@ const appTitle = "Euro Contracts"
 function App() {
   return (
     <div>
-      <Navbar title={appTitle}/>
       <Loginbox buttonLogin = {"Continue"} buttonRegister = {"Register"}/>
     </div>
   );

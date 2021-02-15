@@ -1,0 +1,30 @@
+.left-bar {
+  position: absolute;
+  background-color: white;
+  height: 500px;
+  width: 212px;
+  font-size: 21px;
+  left: 20px;
+}
+
+.line {
+  width: 212px;
+  height: 47px;
+  top: 0px;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+.normal-drop {
+  position: relative;
+}
+
+.normal-drop:hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.title-class {
+  position: relative;
+  top: 35px;
+}

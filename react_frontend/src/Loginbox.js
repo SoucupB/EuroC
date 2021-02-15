@@ -6,7 +6,9 @@ import Companyform from './Companyform'
 import Registerform from './Registerform'
 import Specbutton from './Specbutton'
 import functionMap from './scripts/HttpScripts'
+import Navbar from './Navbar'
 
+const appTitle = "Euro Contracts"
 const boxClass = "loginbox"
 const labelClass = "label-loginbox"
 const classInput = "input-class"
@@ -101,14 +103,17 @@ class Loginbox extends React.Component {
 
   loginForm() {
     return (
-      <div className = {boxClass}>
-        <label className = {[absolute, labelClass, labelUsername].join(' ')}>Email</label>
-        <input id = {this.getEmailId()} className = {[absolute, classInput, inputEmail].join(' ')} type="email"/>
-        <label className = {[absolute, labelClass, labelParola].join(' ')}>Parola</label>
-        <input id = {this.getParolaId()} className = {[absolute, classInput, inputPassword].join(' ')} type="password"/>
-        {this.errorMessage("Wrong email or password!")}
-        <Specbutton className = {[absolute, buttonPoss].join(' ')} onClickListener = {this.loginFunctionNormal.bind(this)} name = {this.props.buttonLogin}></Specbutton>
-        <Specbutton className = {[absolute, buttonPoss, registerClass].join(' ')} onClickListener = {this.registerForm.bind(this)} name = {this.props.buttonRegister}></Specbutton>
+      <div>
+        <Navbar title={appTitle}/>
+        <div className = {boxClass}>
+          <label className = {[absolute, labelClass, labelUsername].join(' ')}>Email</label>
+          <input id = {this.getEmailId()} className = {[absolute, classInput, inputEmail].join(' ')} type="email"/>
+          <label className = {[absolute, labelClass, labelParola].join(' ')}>Parola</label>
+          <input id = {this.getParolaId()} className = {[absolute, classInput, inputPassword].join(' ')} type="password"/>
+          {this.errorMessage("Wrong email or password!")}
+          <Specbutton className = {[absolute, buttonPoss].join(' ')} onClickListener = {this.loginFunctionNormal.bind(this)} name = {this.props.buttonLogin}></Specbutton>
+          <Specbutton className = {[absolute, buttonPoss, registerClass].join(' ')} onClickListener = {this.registerForm.bind(this)} name = {this.props.buttonRegister}></Specbutton>
+        </div>
       </div>
     )
   }

@@ -69,7 +69,7 @@ export default class Registerform extends Component {
     }
     if(key === "Tip") {
       if(!(value === "normal" || value === "admin" || value === "sponsor")) {
-        return {"Error": "Tipurile permise sunt sponsor, normal sau admin!", "ErrorState": errorMessages['wrongType']};
+        return {"Error": "Tipurile permise sunt sponsor sau normal!", "ErrorState": errorMessages['wrongType']};
       }
     }
     return 1;
