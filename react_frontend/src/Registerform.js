@@ -150,7 +150,7 @@ export default class Registerform extends Component {
       const loginFormData = await loginFormHttp(req["user"]['email'], req["user"]['parola'])
       localStorage.setItem("token", loginFormData["client"])
       ReactDOM.render(
-        <Companyform />,
+        <Companyform use = {{"g": "partial"}} />,
         document.getElementById('root')
       );
     }

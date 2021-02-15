@@ -58,7 +58,7 @@ export default class LeftBar extends Component {
 
   companies() {
     ReactDOM.render(
-      <Companyform />,
+      <Companyform use = {{"g": "partial"}}/>,
       document.getElementById('root')
     );
   }
@@ -104,7 +104,7 @@ export default class LeftBar extends Component {
 
   allCompaniesButton() {
     ReactDOM.render(
-      <Companyform useAll = {"true"} />,
+      <Companyform useAll = {"true"} use = {{"g": "all"}} />,
       document.getElementById('root')
     );
   }

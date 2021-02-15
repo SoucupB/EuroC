@@ -37,7 +37,7 @@ class Loginbox extends React.Component {
     };
     if(localStorage.getItem("token")) {
       ReactDOM.render(
-        <Companyform />,
+        <Companyform use = {{"g": "partial"}} />,
         document.getElementById('root')
       );
     }

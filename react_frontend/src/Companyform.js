@@ -81,9 +81,8 @@ class Companyform extends React.Component {
     super(props)
     this.state = {
       dataLoaded: false,
-      reloaded: false
+      reloaded: true
     };
-    this.loadCompanyData()
     this.companyData = {}
     this.stars = {}
     this.allContracts = {}
@@ -112,7 +111,10 @@ class Companyform extends React.Component {
   }
 
   componentDidUpdate() {
-
+    if(this.props.use['g'] === "all" || this.props.use['g'] === "partial") {
+      this.loadCompanyData()
+      this.props.use['g'] = ''
+    }
   }
 
   async loadCompanyData() {
