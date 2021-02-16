@@ -24,7 +24,6 @@ let getSponsorableByToken= async function() {
 }
 
 let getStars = async function(company_id) {
-  let token = localStorage.getItem('token')
   const response = await fetch('http://localhost:8000/getStars?company_id=' + company_id);
   return await response.json();
 }
@@ -68,7 +67,6 @@ let createContract = async function(contract) {
 }
 
 let getContractData = async function(param_id) {
-  let token = localStorage.getItem('token')
   const response = await fetch('http://localhost:8000/getContracts/user_contract?param_id=' + param_id);
   return await response.json();
 }

@@ -5,6 +5,9 @@ import './css/Loginpage.css';
 import './css/CompanySlice.css';
 import functionMap from './scripts/HttpScripts'
 import LeftBar from './LeftBar'
+import CompanyDetailsForm from './CompanyDetailsForm'
+import Createcompany from './Createcompany';
+import ReactDOM from 'react-dom';
 
 const getCompanyByToken = functionMap['getCompanyByToken']
 const getStars = functionMap['getStars']
@@ -53,10 +56,17 @@ let sumMoney = function(sum) {
   return ''
 }
 
+let redirectToCompany = function() {
+  ReactDOM.render(
+    <CompanyDetailsForm />,
+    document.getElementById('root')
+  );
+}
+
 let CompanyFormSlice = function({objId, title, type, location, number, cmp_id, contract_money}) {
   return (
     <div id = {objId} key = {getRandomID()} className = {shadowBox}>
-      <div className = {[companyBox].join(' ')}>
+      <div className = {[companyBox].join(' ')} onClick = {redirectToCompany} >
         <div className = {[companyHeader, companyTextStyle].join(' ')}>
           {title}
         </div>

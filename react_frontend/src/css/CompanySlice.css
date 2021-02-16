@@ -7,6 +7,15 @@
   font-weight: "bold";
 }
 
+.company-form:hover {
+  height: 90px;
+  width: 860px;
+  background-color: white;
+  border: 1px;
+  font-weight: "bold";
+  cursor: pointer;
+}
+
 .company-window-father {
   border: 1px;
   border-style: solid;
