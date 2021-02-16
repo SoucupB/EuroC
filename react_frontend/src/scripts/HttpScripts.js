@@ -34,6 +34,11 @@ let getUserType = async function(company_id) {
   return await response.json();
 }
 
+let getCompanyByID = async function(company_id) {
+  const response = await fetch('http://localhost:8000/company?id=' + company_id);
+  return await response.json();
+}
+
 let createCompany = async function(company) {
   const requestOptions = {
     method: 'post',
@@ -73,4 +78,4 @@ let getContractData = async function(param_id) {
 
 export default {"loginFormHttp": loginFormHttp, "getCompanyByToken": getCompanyByToken,
                 "getStars": getStars, "createCompany": createCompany, "getUserType": getUserType, "getSponsorableByToken": getSponsorableByToken,
-                "createContract": createContract, "getContractData": getContractData}
+                "createContract": createContract, "getContractData": getContractData, "getCompanyByID": getCompanyByID}

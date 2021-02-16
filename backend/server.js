@@ -324,10 +324,10 @@ app.get('/company', function(req, res){
   res.setHeader('Access-Control-Allow-Credentials', true);
   console.log("Request done at operation /company!");
   if(req.query.id == undefined) {
-    res.json({"company": getAll("company", ['id'])});
+    res.json({"company": getAll("company", ['id', 'user_id'])});
     return 0;
   }
-  record = getBy(req.query.id, "company", ['id'])
+  record = getBy(req.query.id, "company", ['id', 'user_id'])
   if(record !== undefined) {
     res.json({"company": record});
   }

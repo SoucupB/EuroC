@@ -56,17 +56,19 @@ let sumMoney = function(sum) {
   return ''
 }
 
-let redirectToCompany = function() {
+let redirectToCompany = function(comp_id) {
+  console.log(comp_id)
   ReactDOM.render(
-    <CompanyDetailsForm />,
+    <CompanyDetailsForm comp_id = {comp_id} />,
     document.getElementById('root')
   );
+  return false
 }
 
 let CompanyFormSlice = function({objId, title, type, location, number, cmp_id, contract_money}) {
   return (
     <div id = {objId} key = {getRandomID()} className = {shadowBox}>
-      <div className = {[companyBox].join(' ')} onClick = {redirectToCompany} >
+      <div className = {[companyBox].join(' ')} onClick = {() => redirectToCompany(cmp_id)} >
         <div className = {[companyHeader, companyTextStyle].join(' ')}>
           {title}
         </div>

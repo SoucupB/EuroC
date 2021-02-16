@@ -24,8 +24,6 @@ const errorMessages = {
   wrongType: 3,
   serverError: 4
 }
-
-let createCompany = functionMap["createCompany"]
 let createContract = functionMap["createContract"]
 
 export default class Contractform extends Component {
